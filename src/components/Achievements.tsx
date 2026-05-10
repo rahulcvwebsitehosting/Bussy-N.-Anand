@@ -70,32 +70,32 @@ function Counter({ end, suffix, label, delay }: { end: number, suffix: string, l
   const { ref, inView } = useInView({ triggerOnce: true });
 
   useEffect(() => {
-    if (inView) {
+    if (!inView) return;
+    let rafId: number;
+    const timeoutId = setTimeout(() => {
       let startTime: number;
       const duration = 2000;
-
       const animateCount = (timestamp: number) => {
         if (!startTime) startTime = timestamp;
         const progress = timestamp - startTime;
         const percent = Math.min(progress / duration, 1);
-        
         const easeOutQuart = 1 - Math.pow(1 - percent, 4);
-        
         setCount(Math.floor(end * easeOutQuart));
-
         if (percent < 1) {
-          requestAnimationFrame(animateCount);
+          rafId = requestAnimationFrame(animateCount);
         }
       };
-      
-      setTimeout(() => {
-        requestAnimationFrame(animateCount);
-      }, delay * 1000);
-    }
+      rafId = requestAnimationFrame(animateCount);
+    }, delay * 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+      cancelAnimationFrame(rafId);
+    };
   }, [inView, end, delay]);
 
   return (
-    <div ref={ref} className="text-center p-4 border-r border-white/5 last:border-r-0 flex flex-col justify-center">
+    <div ref={ref} className="text-center p-4 border-b border-white/5 lg:border-b-0 lg:border-r lg:last:border-r-0 flex flex-col justify-center">
       <div className="text-4xl md:text-5xl font-black text-primary font-sans mb-2">
         {count.toLocaleString()}{suffix}
       </div>

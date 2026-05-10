@@ -48,29 +48,31 @@ export function Transparency() {
             </div>
             
             <div className="bg-dark/50 border border-white/10 rounded-sm overflow-hidden">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="bg-white/5">
-                    <th className="p-4 text-[10px] uppercase tracking-widest font-bold text-white/40">Case</th>
-                    <th className="p-4 text-[10px] uppercase tracking-widest font-bold text-white/40">Status</th>
-                  </tr>
-                </thead>
-                <tbody className="text-sm">
-                  {cases.map((c, idx) => (
-                    <tr key={idx} className="border-t border-white/5 hover:bg-white/5 transition-colors">
-                      <td className="p-4">
-                        <span className="block font-bold text-cream mb-1">{c.case}</span>
-                        <span className="block text-xs text-white/40 leading-relaxed">{c.details}</span>
-                      </td>
-                      <td className="p-4 align-top">
-                        <span className="inline-block px-2 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest whitespace-nowrap">
-                          {c.status}
-                        </span>
-                      </td>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="bg-white/5">
+                      <th className="p-4 text-[10px] uppercase tracking-widest font-bold text-white/40">Case</th>
+                      <th className="p-4 text-[10px] uppercase tracking-widest font-bold text-white/40">Status</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="text-sm">
+                    {cases.map((c, idx) => (
+                      <tr key={idx} className="border-t border-white/5 hover:bg-white/5 transition-colors">
+                        <td className="p-4">
+                          <span className="block font-bold text-cream mb-1">{c.case}</span>
+                          <span className="block text-xs text-white/40 leading-relaxed">{c.details}</span>
+                        </td>
+                        <td className="p-4 align-top">
+                          <span className="inline-block px-2 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest whitespace-nowrap">
+                            {c.status}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
               <div className="p-4 bg-primary/5 border-t border-white/10">
                 <p className="text-xs text-cream/70 italic flex items-start gap-2">
                   <Info className="w-4 h-4 text-primary shrink-0" />

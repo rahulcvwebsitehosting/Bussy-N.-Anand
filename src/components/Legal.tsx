@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
 
@@ -9,6 +10,17 @@ interface LegalModalProps {
 }
 
 export function LegalModal({ isOpen, onClose, title, content }: LegalModalProps) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -88,8 +100,8 @@ export const PrivacyContent = () => (
       <p>We do NOT sell, rent, or trade your personal information. We may share information only with the MLA office staff for grievance redressal or when required by law.</p>
     </section>
     <section>
-      <h3 className="text-cream font-bold uppercase tracking-wider mb-2">11. CONTACT US</h3>
-      <p>For privacy-related queries or data removal requests: Email: rahulcvfiitjee@gmail.com</p>
+      <h3 className="text-cream font-bold uppercase tracking-wider mb-2">6. CONTACT US</h3>
+      <p>For privacy-related queries or data removal requests: Email: office@bussyanand.org</p>
     </section>
   </div>
 );
@@ -106,20 +118,20 @@ export const TermsContent = () => (
       <p>By accessing or using this Site, you agree to be bound by these Terms. If you do not agree, please do not use the Site.</p>
     </section>
     <section>
-      <h3 className="text-cream font-bold uppercase tracking-wider mb-2">4. ACCURACY OF INFORMATION</h3>
+      <h3 className="text-cream font-bold uppercase tracking-wider mb-2">3. ACCURACY OF INFORMATION</h3>
       <p>While we strive to ensure accuracy, the information on this Site is provided "as is" without warranties of any kind. Political positions, ministerial portfolios, and constituency details may change.</p>
     </section>
     <section>
-      <h3 className="text-cream font-bold uppercase tracking-wider mb-2">5. GRIEVANCE SUBMISSION</h3>
+      <h3 className="text-cream font-bold uppercase tracking-wider mb-2">4. GRIEVANCE SUBMISSION</h3>
       <p>The contact/grievance form is provided as a convenience to constituents. Submission of a grievance does NOT guarantee response from the MLA office or resolution of the issue.</p>
     </section>
     <section>
-      <h3 className="text-cream font-bold uppercase tracking-wider mb-2">10. GOVERNING LAW</h3>
+      <h3 className="text-cream font-bold uppercase tracking-wider mb-2">5. GOVERNING LAW</h3>
       <p>These Terms shall be governed by and construed in accordance with the laws of India. Any dispute shall be subject to the exclusive jurisdiction of the courts in Chennai, Tamil Nadu.</p>
     </section>
     <section>
-      <h3 className="text-cream font-bold uppercase tracking-wider mb-2">12. CONTACT</h3>
-      <p>For questions about these Terms: Email: rahulcvfiitjee@gmail.com</p>
+      <h3 className="text-cream font-bold uppercase tracking-wider mb-2">6. CONTACT</h3>
+      <p>For questions about these Terms: Email: office@bussyanand.org</p>
     </section>
   </div>
 );

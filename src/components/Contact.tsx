@@ -1,7 +1,20 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Instagram, Mail, Phone, Send, Facebook, Youtube } from 'lucide-react';
 
 export function Contact() {
+  const [formData, setFormData] = useState({ name: '', email: '', category: 'General Inquiry', ward: 'West Mambalam (Ward 140)', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
   return (
     <section id="contact" className="py-24 bg-[#061026] relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -103,29 +116,42 @@ export function Contact() {
             <div className="bg-transparent p-8 md:p-10 rounded-sm shadow-xl border border-white/5 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full pointer-events-none"></div>
               <h3 className="text-xl font-bold text-cream mb-8 uppercase tracking-widest text-center md:text-left">Send a Message</h3>
-              <form className="space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6 relative z-10" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-[10px] uppercase tracking-widest font-bold text-white/50 mb-2">Your Name</label>
                     <input 
                       type="text" 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 bg-dark border border-white/10 rounded-sm text-cream focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all placeholder:text-white/20"
                       placeholder="John Doe"
+                      required
                     />
                   </div>
                   <div>
                     <label className="block text-[10px] uppercase tracking-widest font-bold text-white/50 mb-2">Email Address</label>
                     <input 
                       type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 bg-dark border border-white/10 rounded-sm text-cream focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all placeholder:text-white/20"
                       placeholder="john@example.com"
+                      required
                     />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-[10px] uppercase tracking-widest font-bold text-white/50 mb-2">Issue Category</label>
-                    <select className="w-full px-4 py-3 bg-dark border border-white/10 rounded-sm text-cream focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all">
+                    <select 
+                      name="category"
+                      value={formData.category}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-dark border border-white/10 rounded-sm text-cream focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
+                    >
                       <option>General Inquiry</option>
                       <option>Drainage / Sewage</option>
                       <option>Roads / Maintenance</option>
@@ -136,7 +162,12 @@ export function Contact() {
                   </div>
                   <div>
                     <label className="block text-[10px] uppercase tracking-widest font-bold text-white/50 mb-2">Ward (T. Nagar)</label>
-                    <select className="w-full px-4 py-3 bg-dark border border-white/10 rounded-sm text-cream focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all">
+                    <select 
+                      name="ward"
+                      value={formData.ward}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-dark border border-white/10 rounded-sm text-cream focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
+                    >
                       <option>West Mambalam (Ward 140)</option>
                       <option>T. Nagar (Ward 141)</option>
                       <option>Pondy Bazaar (Ward 136)</option>
@@ -148,20 +179,31 @@ export function Contact() {
                 <div>
                   <label className="block text-[10px] uppercase tracking-widest font-bold text-white/50 mb-2">Message / Grievance</label>
                   <textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={5}
                     className="w-full px-4 py-3 bg-dark border border-white/10 rounded-sm text-cream focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all resize-none placeholder:text-white/20"
                     placeholder="Describe your issue in detail..."
+                    required
                   ></textarea>
                 </div>
-                <button 
-                  type="submit"
-                  className="w-full bg-primary text-dark hover:bg-accent px-8 py-4 rounded-sm font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2 group relative overflow-hidden"
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Send Message
-                    <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                  </span>
-                </button>
+                {submitted ? (
+                  <div className="w-full bg-primary/10 border border-primary/30 rounded-sm p-6 text-center">
+                    <p className="text-primary font-bold uppercase tracking-widest text-sm mb-2">Message Received</p>
+                    <p className="text-white/60 text-xs">Thank you. Our office will review your message and respond within 3 working days.</p>
+                  </div>
+                ) : (
+                  <button 
+                    type="submit"
+                    className="w-full bg-primary text-dark hover:bg-accent px-8 py-4 rounded-sm font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2 group relative overflow-hidden"
+                  >
+                    <span className="relative z-10 flex items-center gap-2">
+                      Send Message
+                      <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </span>
+                  </button>
+                )}
               </form>
             </div>
           </motion.div>

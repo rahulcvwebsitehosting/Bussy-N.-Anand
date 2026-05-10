@@ -46,7 +46,7 @@ function TimelineItem({ data, index }: { data: any, index: number }) {
   const isEven = index % 2 === 0;
 
   return (
-    <div ref={ref} className={`mb-12 md:mb-24 flex justify-between items-center w-full ${isEven ? 'md:flex-row-reverse' : ''}`}>
+    <div ref={ref} className={`mb-12 md:mb-24 flex justify-between items-center w-full relative ${isEven ? 'md:flex-row-reverse' : ''}`}>
       <div className="hidden md:block w-5/12"></div>
       
       {/* Node */}

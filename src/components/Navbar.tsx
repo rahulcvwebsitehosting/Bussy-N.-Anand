@@ -40,15 +40,15 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 min-w-0 overflow-hidden">
               <div className="w-14 h-14 flex items-center justify-center aspect-square overflow-hidden shrink-0">
                 <img src="https://i.ibb.co/V0920jFM/tvklogo-removebg-preview.png" alt="TVK Logo" className="w-full h-full object-contain rounded-full" />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col min-w-0">
                 <span className={`font-sans text-xl font-bold text-primary ${isTamil ? 'font-tamil' : 'tracking-tight'}`}>
                   {isTamil ? 'புஸ்ஸி என். ஆனந்த்' : 'BUSSY N. ANAND'}
                 </span>
-                <span className={`text-[10px] uppercase opacity-80 text-cream ${isTamil ? 'font-tamil' : 'tracking-[0.2em]'}`}>
+                <span className={`text-[10px] uppercase opacity-80 text-cream truncate ${isTamil ? 'font-tamil' : 'tracking-[0.2em]'}`}>
                   {isTamil ? 'அமைச்சர் | சட்டமன்ற உறுப்பினர் | த.வெ.க' : 'Minister | MLA | General Secretary, TVK'}
                 </span>
               </div>
@@ -68,7 +68,11 @@ export function Navbar() {
               </button>
             </div>
 
-            <button className="md:hidden text-cream" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            <button 
+              className="md:hidden text-cream" 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            >
               {isMobileMenuOpen ? <X /> : <Menu />}
             </button>
           </div>

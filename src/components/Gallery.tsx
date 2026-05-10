@@ -1,46 +1,57 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ZoomIn } from 'lucide-react';
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
+
   const images = [
     {
       src: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Bussy_Anand_MLA.jpg",
-      alt: "T. Nagar Campaign",
+      alt: "Campaigning in T. Nagar",
       ta: "தி. நகர் தேர்தல் பிரச்சாரம்",
       en: "T. Nagar Election Campaign"
     },
     {
       src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/800px-Bussy_Anand.jpg",
-      alt: "Sworn in as Minister",
+      alt: "Minister Swearing-in Ceremony",
       ta: "அமைச்சராக பதவியேற்பு",
       en: "Swearing-in as Minister"
     },
     {
+      src: "https://i.ibb.co/TM8dfcqW/Bussy-Remove-BG.png",
+      alt: "Official Presidential Portrait",
+      ta: "அதிகாரப்பூர்வ புகைப்படம்",
+      en: "Official State Portrait"
+    },
+    {
+      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/640px-Bussy_Anand.jpg",
+      alt: "Constituency Grievance Meeting",
+      ta: "தொகுதி மக்கள் சந்திப்பு",
+      en: "Public Grievance Redressal"
+    },
+    {
       src: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Bussy_Anand_MLA.jpg",
-      alt: "West Mambalam Inspection",
-      ta: "மேற்கு மாம்பலம் ஆய்வு",
-      en: "West Mambalam Inspection"
+      alt: "Inspecting Monsoon Relief",
+      ta: "நிவாரண பணிகள் ஆய்வு",
+      en: "Monsoon Relief Inspection"
     },
     {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/800px-Bussy_Anand.jpg",
-      alt: "Pondy Bazaar Visit",
-      ta: "பாண்டி பஜார் சந்திப்பு",
-      en: "Pondy Bazaar Public Meeting"
-    },
-    {
-      src: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Bussy_Anand_MLA.jpg",
-      alt: "With T. Nagar Residents",
-      ta: "தொகுதி மக்களுடன்",
-      en: "With T. Nagar Residents"
-    },
-    {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/800px-Bussy_Anand.jpg",
-      alt: "2026 Assembly Victory",
-      ta: "2026 சட்டமன்ற வெற்றி",
-      en: "2026 Legislative Victory"
+      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/400px-Bussy_Anand.jpg",
+      alt: "Legislative Assembly Session",
+      ta: "சட்டமன்ற நிகழ்வுகள்",
+      en: "At the Legislative Assembly"
     }
   ];
 
