@@ -85,7 +85,6 @@ export function TVK() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <h3 className="font-tamil text-3xl font-bold text-primary mb-8 text-center uppercase tracking-widest">Good Deeds & Milestones</h3>
           
           <div className="space-y-4">
             {milestones.map((m, index) => (

@@ -33,7 +33,7 @@ export function Footer() {
             </p>
             <div className="mb-6 p-3 border border-primary/20 bg-primary/5 rounded-sm">
                <p className="text-primary text-[10px] font-bold uppercase tracking-[0.2em] leading-relaxed">
-                 Disclaimer: This is an independent initiative and not the official website of the Government of Tamil Nadu, TVK, or Shri Bussy N. Anand.
+                 Disclaimer: This is an independent initiative and not the official website of the Government of Tamil Nadu, Tamilaga Vettri Kazhagam (TVK), or Shri Bussy N. Anand.
                </p>
             </div>
             <div className="flex gap-4">
@@ -97,7 +97,7 @@ export function Footer() {
               &copy; {new Date().getFullYear()} Hon. Bussy N. Anand. All rights reserved.
             </p>
             <p className="text-primary/40 text-[10px] uppercase tracking-widest max-w-lg leading-relaxed">
-              This is an independent initiative and not the official website of the Government of Tamil Nadu, TVK, or Shri Bussy N. Anand.
+              This is an independent initiative and not the official website of the Government of Tamil Nadu, Tamilaga Vettri Kazhagam (TVK), or Shri Bussy N. Anand.
             </p>
           </div>
           <div className="flex justify-center gap-6 text-sm text-gray-500">

@@ -29,7 +29,6 @@ export function Transparency() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-bold text-xs uppercase tracking-[0.4em] mb-4 block">Compliance & Accountability</span>
           <h2 className="font-tamil text-4xl md:text-5xl font-bold text-cream mb-4">வெளிப்படைத்தன்மை | Transparency</h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
         </motion.div>
@@ -44,7 +43,6 @@ export function Transparency() {
           >
             <div className="flex items-center gap-3 mb-6">
               <Gavel className="text-primary w-6 h-6" />
-              <h3 className="text-xl font-bold uppercase tracking-widest text-primary">Legal Standing</h3>
             </div>
             
             <div className="bg-dark/50 border border-white/10 rounded-sm overflow-hidden">
@@ -102,7 +100,6 @@ export function Transparency() {
               </div>
               
               <div className="bg-dark/30 border border-white/5 p-6 rounded-sm border-l-4 border-l-primary">
-                <span className="block text-[10px] uppercase tracking-widest text-white/40 font-bold mb-2">Commitment</span>
                 <p className="text-sm text-cream/80 leading-relaxed font-light">
                   Dedicated to maintaining transparency in public life and providing the public with full access to legislative disclosures.
                 </p>

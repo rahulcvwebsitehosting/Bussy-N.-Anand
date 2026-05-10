@@ -89,7 +89,7 @@ export function About() {
             <div className="flex flex-wrap gap-4 pt-4">
               {secondaryFacts.map((fact, index) => (
                 <div key={index} className="px-4 py-2 bg-white/5 border border-white/10 rounded-sm">
-                  <span className="block text-[9px] text-white/40 uppercase font-bold tracking-[0.2em]">{fact.label}</span>
+                  <span className="block text-[9px] text-white/40 uppercase font-bold tracking-[0.2em] mb-1">{fact.label}</span>
                   <span className="text-cream text-xs font-medium">{fact.value}</span>
                 </div>
               ))}
