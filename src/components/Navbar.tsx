@@ -11,9 +11,6 @@ export function Navbar() {
     const handleScroll = () => {
       const scrolled = window.scrollY > 50;
       setIsScrolled(scrolled);
-      if (scrolled) {
-        setIsMobileMenuOpen(false);
-      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -36,7 +33,7 @@ export function Navbar() {
     <>
       <div className="fixed top-0 left-0 w-full h-1 bg-primary z-[60]"></div>
       <div className="fixed top-1 left-0 w-full h-4 bg-gradient-to-b from-primary/20 to-transparent z-[60] pointer-events-none"></div>
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-dark/90 backdrop-blur-md border-b border-primary/30 py-4 shadow-lg' : 'bg-transparent py-6 border-b border-white/5'}`}>
+      <nav className={`fixed top-0 w-full z-[70] transition-all duration-300 ${isScrolled ? 'bg-dark/90 backdrop-blur-md border-b border-primary/30 py-4 shadow-lg' : 'bg-transparent py-6 border-b border-white/5'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             
@@ -69,7 +66,7 @@ export function Navbar() {
             </div>
 
             <button 
-              className="md:hidden text-cream" 
+              className="md:hidden text-cream p-2" 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
@@ -84,7 +81,7 @@ export function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="absolute top-full left-0 w-full md:hidden bg-dark border-b border-primary/30 shadow-xl max-h-[80vh] overflow-y-auto z-50"
+              className="absolute top-full left-0 w-full md:hidden bg-dark border-b border-primary/30 shadow-xl max-h-[80vh] overflow-y-auto z-[70]"
             >
               <div className="flex flex-col px-4 py-6 space-y-4">
                 {navLinks.map((link) => (

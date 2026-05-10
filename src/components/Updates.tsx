@@ -76,28 +76,6 @@ export function Updates() {
             </motion.div>
           ))}
         </div>
-
-        <div className="mt-16 bg-primary/5 border border-primary/20 p-8 rounded-sm flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-            <div className="bg-primary/20 p-4 rounded-full text-primary">
-              <Bell className="w-6 h-6 animate-pulse" />
-            </div>
-            <div>
-              <h4 className="text-cream font-bold">Subscribe to Updates</h4>
-              <p className="text-white/40 text-[10px] uppercase tracking-widest">Get official press releases directly via WhatsApp/Email</p>
-            </div>
-          </div>
-          <div className="flex w-full md:w-auto gap-2">
-            <input 
-              type="text" 
-              placeholder="Your Phone / Email" 
-              className="w-full flex-grow md:w-64 bg-dark border border-white/10 px-4 py-3 text-cream text-sm focus:outline-none focus:ring-1 focus:ring-primary rounded-sm"
-            />
-            <button className="bg-primary text-dark font-bold px-6 py-3 text-[10px] uppercase tracking-widest rounded-sm hover:bg-cream transition-colors">
-              Subscribe
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );

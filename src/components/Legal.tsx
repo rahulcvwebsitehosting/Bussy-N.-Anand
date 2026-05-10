@@ -77,7 +77,7 @@ export const PrivacyContent = () => (
       <h3 className="text-cream font-bold uppercase tracking-wider mb-2">2. INFORMATION WE COLLECT</h3>
       <p>We may collect the following types of information:</p>
       <ul className="list-disc pl-5 space-y-1">
-        <li>Information You Provide Directly: Name, phone number, and email address (via the grievance/contact form), Ward/area details within T. Nagar constituency, Nature of grievance or feedback submitted.</li>
+        <li>Information You Provide Directly: Name and email address (via the grievance/contact form), Ward/area details within T. Nagar constituency, Nature of grievance or feedback submitted.</li>
         <li>Automatically Collected Information: IP address, Browser type and version, Device information, Pages visited and time spent, Referring website.</li>
       </ul>
     </section>
