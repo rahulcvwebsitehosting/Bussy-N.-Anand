@@ -80,8 +80,8 @@ Deploy the blueprint locally in seconds. This project uses `npm` and requires a 
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/rahulcvwebsitehosting/bussynanand-portfolio.git
-cd bussynanand-portfolio
+git clone https://github.com/rahulcvwebsitehosting/Bussy-N.-Anand.git
+cd Bussy-N.-Anand
 ```
 
 ### 2. Install Dependencies
@@ -117,7 +117,8 @@ Architected and developed by **Rahul Shyam** (Lead Developer).
 
 <div align="center">
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-success?style=for-the-badge&logo=vercel)](https://bussynanand.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rahulshyamcivil)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rahulcvwebsitehosting)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rahulcvwebsitehosting/Bussy-N.-Anand)
 
 </div>
