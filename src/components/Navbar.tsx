@@ -8,7 +8,13 @@ export function Navbar() {
   const [isTamil, setIsTamil] = useState(true);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 50;
+      setIsScrolled(scrolled);
+      if (scrolled) {
+        setIsMobileMenuOpen(false);
+      }
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -35,14 +41,14 @@ export function Navbar() {
           <div className="flex justify-between items-center">
             
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center shadow-lg shadow-primary/20 shrink-0 border border-primary/30 bg-dark/50">
-                <img src="https://i.ibb.co/V0920jFM/tvklogo-removebg-preview.png" alt="TVK Logo" className="w-full h-full object-contain transform scale-125" />
+              <div className="w-14 h-14 flex items-center justify-center aspect-square overflow-hidden shrink-0">
+                <img src="https://i.ibb.co/V0920jFM/tvklogo-removebg-preview.png" alt="TVK Logo" className="w-full h-full object-contain rounded-full" />
               </div>
               <div className="flex flex-col">
-                <span className="font-sans text-xl font-bold tracking-tight text-primary">
+                <span className={`font-sans text-xl font-bold text-primary ${isTamil ? 'font-tamil' : 'tracking-tight'}`}>
                   {isTamil ? 'புஸ்ஸி என். ஆனந்த்' : 'BUSSY N. ANAND'}
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.2em] opacity-80 text-cream">
+                <span className={`text-[10px] uppercase opacity-80 text-cream ${isTamil ? 'font-tamil' : 'tracking-[0.2em]'}`}>
                   {isTamil ? 'அமைச்சர் | சட்டமன்ற உறுப்பினர் | த.வெ.க' : 'Minister | MLA | General Secretary, TVK'}
                 </span>
               </div>
@@ -50,7 +56,7 @@ export function Navbar() {
 
             <div className="hidden md:flex items-center gap-8 text-[10px] font-bold tracking-widest uppercase">
               {navLinks.map((link) => (
-                <a key={link.en} href={link.href} className="text-cream/80 hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary pb-1">
+                <a key={link.en} href={link.href} className={`text-cream/80 hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary pb-1 ${isTamil ? 'font-tamil tracking-normal' : ''}`}>
                   {isTamil ? link.ta : link.en}
                 </a>
               ))}
@@ -74,7 +80,7 @@ export function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-dark border-b border-primary/30 shadow-xl"
+              className="absolute top-full left-0 w-full md:hidden bg-dark border-b border-primary/30 shadow-xl max-h-[80vh] overflow-y-auto z-50"
             >
               <div className="flex flex-col px-4 py-6 space-y-4">
                 {navLinks.map((link) => (
@@ -82,7 +88,7 @@ export function Navbar() {
                     key={link.en} 
                     href={link.href} 
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-cream hover:text-primary transition-colors font-medium text-[11px] uppercase tracking-widest border-b border-white/5 pb-3"
+                    className={`text-cream hover:text-primary transition-colors font-medium uppercase border-b border-white/5 pb-3 ${isTamil ? 'font-tamil text-[13px] leading-relaxed tracking-normal' : 'text-[11px] tracking-widest'}`}
                   >
                     {isTamil ? link.ta : link.en}
                   </a>

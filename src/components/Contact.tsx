@@ -28,7 +28,7 @@ export function Contact() {
                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-24 bg-secondary rounded-b-full opacity-10 group-hover:opacity-20 transition-opacity"></div>
                
               <div>
-                <h3 className="font-tamil text-2xl font-bold text-primary mb-6 relative z-10 text-center uppercase tracking-widest">தொடர்பு கொள்க</h3>
+                <h3 className="font-tamil text-2xl font-bold text-primary mb-6 relative z-10 text-center uppercase">தொடர்பு கொள்க</h3>
                 <p className="text-white/60 mb-10 leading-relaxed font-light text-center relative z-10">
                   "The office of Bussy Anand maintains a direct line of communication with citizens and supporters."
                 </p>

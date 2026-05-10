@@ -49,7 +49,7 @@ export function About() {
                 }}
               />
               <div className="absolute -bottom-6 -right-6 z-30 bg-primary text-dark p-6 rounded-sm shadow-2xl">
-                <p className="font-tamil font-bold text-xl uppercase tracking-widest leading-tight">மக்கள்<br/>தொண்டன்</p>
+                <p className="font-tamil font-bold text-xl uppercase">மக்கள்<br/>தொண்டன்</p>
               </div>
             </div>
           </motion.div>

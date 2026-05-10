@@ -21,8 +21,8 @@ export function Footer() {
           
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center border border-primary/30 bg-dark/50">
-                <img src="https://i.ibb.co/V0920jFM/tvklogo-removebg-preview.png" alt="TVK Logo" className="w-full h-full object-contain transform scale-110" />
+              <div className="w-12 h-12 flex items-center justify-center aspect-square overflow-hidden shrink-0">
+                <img src="https://i.ibb.co/V0920jFM/tvklogo-removebg-preview.png" alt="TVK Logo" className="w-full h-full object-contain rounded-full" />
               </div>
               <span className="font-sans text-xl tracking-tight font-bold text-primary">
                 BUSSY N. ANAND

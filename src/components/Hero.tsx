@@ -63,12 +63,13 @@ export function Hero() {
           </div>
 
           <div className="relative z-10 border-l-4 border-primary pl-8">
-            <h2 className="font-tamil text-4xl md:text-5xl text-cream italic mb-2 leading-tight">அமைச்சர்</h2>
-            <h3 className="text-2xl md:text-3xl font-light text-primary mb-6 uppercase tracking-wider">
+            <h2 className="font-tamil text-5xl md:text-7xl text-white/5 uppercase opacity-20 absolute -top-12 -left-4 pointer-events-none select-none">அமைச்சர்</h2>
+            <h2 className="font-tamil text-3xl md:text-4xl text-cream italic mb-4 relative z-10">அமைச்சர்</h2>
+            <h3 className="text-xl md:text-2xl font-light text-primary mb-8 uppercase tracking-wider">
               Minister | MLA | GS
             </h3>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold text-cream mb-6 tracking-tight leading-none">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold text-cream mb-6 tracking-tight leading-none relative z-10">
               Bussy N. <span className="text-primary">Anand</span>
             </h1>
             
@@ -115,34 +116,29 @@ export function Hero() {
             </svg>
           </div>
 
-          <div className="relative w-72 h-80 md:w-80 md:h-96 bg-gray-800 rounded-t-[100px] border-8 border-primary/20 shadow-2xl flex flex-col items-center justify-end overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark/40 to-dark z-20 pointer-events-none"></div>
+          <div className="relative w-72 h-80 md:w-80 md:h-96 flex flex-col items-center justify-end group lg:scale-110">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dark z-30 pointer-events-none"></div>
             
             <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Bussy_Anand_MLA.jpg" 
+              src="https://i.ibb.co/TM8dfcqW/Bussy-Remove-BG.png" 
               alt="Bussy N. Anand" 
-              className="absolute inset-0 w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-700 opacity-60 mix-blend-screen"
+              className="absolute inset-0 w-full h-full object-contain object-bottom transition-all duration-700 z-20"
               onError={(e) => {
                 e.currentTarget.src = 'https://ui-avatars.com/api/?name=Bussy+N.+Anand&size=600&background=0D1B3E&color=E8A020&font-size=0.33';
               }}
             />
             
-            {/* TVK Background Text */}
-            <div className="absolute top-0 left-0 w-full h-full bg-primary/10 flex items-center justify-center z-10">
-               <span className="text-white/10 text-8xl font-bold uppercase transform -rotate-12 select-none pointer-events-none">TVK</span>
-            </div>
-
-            <div className="z-30 text-center pb-8 opacity-100 transition-opacity">
-              <div className="text-primary font-tamil text-2xl md:text-3xl mb-1">Hon. Bussy N. Anand</div>
+            <div className="z-40 text-center pb-8 opacity-100 transition-opacity">
+              <div className="text-primary font-tamil text-2xl md:text-3xl mb-1 drop-shadow-md">Hon. Bussy N. Anand</div>
               <div className="text-[10px] uppercase tracking-[0.3em] text-white/60">Minister, Govt of Tamil Nadu</div>
             </div>
           </div>
           
-          <div className="absolute bottom-0 lg:-bottom-10 right-0 lg:right-10 w-48 lg:w-64 p-4 lg:p-6 bg-secondary border-l-4 border-accent shadow-2xl z-40 hidden md:block">
-            <p className="text-[10px] lg:text-xs italic leading-relaxed text-cream">
+          <div className="absolute -bottom-12 right-[-20%] w-72 p-6 bg-secondary/80 backdrop-blur-sm border-l-4 border-accent shadow-2xl z-50 hidden lg:block">
+            <p className="text-sm italic leading-relaxed text-cream">
               "To advocate for the unvoiced and establish a governance model rooted in social justice."
             </p>
-            <p className="text-[8px] lg:text-[10px] font-bold mt-2 text-accent uppercase">— Our Mission</p>
+            <p className="text-[10px] font-bold mt-2 text-accent uppercase tracking-widest">— Our Mission</p>
           </div>
         </motion.div>
       </div>

@@ -9,8 +9,8 @@
   --color-cream: #FFF8E7;
   --color-earth: #2D5A27;
 
-  --font-tamil: 'Tiro Tamil', serif;
-  --font-sans: 'Poppins', sans-serif;
+  --font-tamil: 'Noto Sans Tamil', Latha, Vijaya, 'Segoe UI', sans-serif;
+  --font-sans: 'Poppins', 'Noto Sans Tamil', Latha, Vijaya, 'Segoe UI', sans-serif;
 }
 
 html {
@@ -22,10 +22,17 @@ body {
   background-color: var(--color-dark);
   color: var(--color-cream);
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6, .font-tamil {
+h1, h2, h3, h4, h5, h6, .font-tamil, .tamil-text {
   font-family: var(--font-tamil);
+  line-height: 1.8;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: left;
+  direction: ltr;
+  letter-spacing: normal !important;
 }
 
 .bg-dark { background-color: var(--color-dark); }
