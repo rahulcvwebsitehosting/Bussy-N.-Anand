@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Flag, Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isTamil, setIsTamil] = useState(false);
+  const [isTamil, setIsTamil] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -17,6 +17,9 @@ export function Navbar() {
     { en: 'Home', ta: 'முகப்பு', href: '#hero' },
     { en: 'About', ta: 'பற்றி', href: '#about' },
     { en: 'Journey', ta: 'பயணம்', href: '#timeline' },
+    { en: 'Transparency', ta: 'வெளிப்படைத்தன்மை', href: '#transparency' },
+    { en: 'Constituency', ta: 'தொகுதி', href: '#constituency' },
+    { en: 'Updates', ta: 'செய்திகள்', href: '#updates' },
     { en: 'Achievements', ta: 'சாதனைகள்', href: '#achievements' },
     { en: 'TVK', ta: 'த.வெ.க', href: '#tvk' },
     { en: 'Gallery', ta: 'புகைப்படங்கள்', href: '#gallery' },
@@ -32,15 +35,15 @@ export function Navbar() {
           <div className="flex justify-between items-center">
             
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gradient-to-tr from-primary to-accent rounded-full flex items-center justify-center shadow-lg shadow-primary/20 shrink-0">
-                <Flag className="w-6 h-6 text-dark animate-wave" />
+              <div className="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center shadow-lg shadow-primary/20 shrink-0 border border-primary/30 bg-dark/50">
+                <img src="https://i.ibb.co/V0920jFM/tvklogo-removebg-preview.png" alt="TVK Logo" className="w-full h-full object-contain transform scale-125" />
               </div>
               <div className="flex flex-col">
                 <span className="font-sans text-xl font-bold tracking-tight text-primary">
                   {isTamil ? 'புஸ்ஸி என். ஆனந்த்' : 'BUSSY N. ANAND'}
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.2em] opacity-80 text-cream">
-                  {isTamil ? 'பொதுச்செயலாளர் | த.வெ.க' : 'General Secretary | TVK'}
+                  {isTamil ? 'அமைச்சர் | சட்டமன்ற உறுப்பினர் | த.வெ.க' : 'Minister | MLA | General Secretary, TVK'}
                 </span>
               </div>
             </div>

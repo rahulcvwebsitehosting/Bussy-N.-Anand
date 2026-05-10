@@ -8,39 +8,39 @@ export function Gallery() {
   const images = [
     {
       src: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Bussy_Anand_MLA.jpg",
-      alt: "Bussy Anand Campaign",
-      ta: "மக்கள் சந்திப்பு",
-      en: "Public Meeting"
+      alt: "T. Nagar Campaign",
+      ta: "தி. நகர் தேர்தல் பிரச்சாரம்",
+      en: "T. Nagar Election Campaign"
     },
     {
       src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/800px-Bussy_Anand.jpg",
-      alt: "TVK Event",
-      ta: "த.வெ.க நிகழ்வு",
-      en: "TVK Event"
+      alt: "Sworn in as Minister",
+      ta: "அமைச்சராக பதவியேற்பு",
+      en: "Swearing-in as Minister"
     },
     {
       src: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Bussy_Anand_MLA.jpg",
-      alt: "Public Service",
-      ta: "மக்கள் பணி",
-      en: "Public Service"
+      alt: "West Mambalam Inspection",
+      ta: "மேற்கு மாம்பலம் ஆய்வு",
+      en: "West Mambalam Inspection"
     },
     {
       src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/800px-Bussy_Anand.jpg",
-      alt: "Puducherry Days",
-      ta: "புதுச்சேரி பயணம்",
-      en: "Puducherry Journey"
+      alt: "Pondy Bazaar Visit",
+      ta: "பாண்டி பஜார் சந்திப்பு",
+      en: "Pondy Bazaar Public Meeting"
     },
     {
       src: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Bussy_Anand_MLA.jpg",
-      alt: "With Supporters",
-      ta: "தொண்டர்களுடன்",
-      en: "With Supporters"
+      alt: "With T. Nagar Residents",
+      ta: "தொகுதி மக்களுடன்",
+      en: "With T. Nagar Residents"
     },
     {
       src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/800px-Bussy_Anand.jpg",
-      alt: "2026 Victory",
-      ta: "2026 வெற்றி",
-      en: "2026 Victory"
+      alt: "2026 Assembly Victory",
+      ta: "2026 சட்டமன்ற வெற்றி",
+      en: "2026 Legislative Victory"
     }
   ];
 

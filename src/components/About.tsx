@@ -4,9 +4,14 @@ import { Calendar, User, MapPin, Award } from 'lucide-react';
 export function About() {
   const bioFacts = [
     { icon: <Calendar />, label: "Born", value: "18 July 1964, Puducherry" },
-    { icon: <User />, label: "Education", value: "Calve College, Puducherry" },
-    { icon: <Award />, label: "Role", value: "General Secretary, TVK" },
-    { icon: <MapPin />, label: "Constituency", value: "Thiyagarayanagar, Chennai (2026)" },
+    { icon: <Award />, label: "Cabinet Role", value: "Minister for Urban Development, TN" },
+    { icon: <User />, label: "Education", value: "8th Std (Pass), Calve College (1981)" },
+    { icon: <MapPin />, label: "Constituency", value: "T. Nagar (MLA 2026)" },
+  ];
+
+  const secondaryFacts = [
+    { label: "Financial Transparency", value: "₹7.48 Cr Assets (2026 Affinity)" },
+    { label: "Early Career", value: "Real Estate & Printing Press" },
   ];
 
   return (
@@ -57,7 +62,7 @@ export function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-xl md:text-2xl text-white/70 leading-relaxed font-light">
-              "As the General Secretary of Tamizhaga Vetri Kazhagam (TVK) and a distinguished former Member of the Legislative Assembly for Puducherry, Bussy Anand stands as a pillar of statesman-like leadership and public service. His political journey is anchored in a profound dedication to grassroots empowerment and administrative integrity."
+              "Hon. Bussy N. Anand currently serves as the Minister for Urban Development & Public Welfare in the Government of Tamil Nadu and the General Secretary of Tamizhaga Vetri Kazhagam (TVK). He earned the nickname 'Bussy' after his landmark 2006 election win from the Bussy constituency in Puducherry. Having previously served as an MLA for Puducherry, he now represents T. Nagar in Chennai following a decisive victory in the 2026 Assembly Elections."
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -70,14 +75,23 @@ export function About() {
                   transition={{ delay: 0.4 + (index * 0.1) }}
                   className="bg-transparent p-6 rounded-sm border border-white/5 border-l-4 border-l-primary hover:bg-white/5 hover:border-white/10 transition-colors flex items-start gap-4 group"
                 >
-                  <div className="text-primary bg-primary/10 p-3 rounded-full group-hover:bg-primary group-hover:text-dark transition-colors">
+                  <div className="text-primary bg-primary/10 p-3 rounded-full group-hover:bg-primary group-hover:text-dark transition-colors shrink-0">
                     {fact.icon}
                   </div>
                   <div>
                     <h4 className="text-[10px] text-white/40 font-bold uppercase tracking-widest">{fact.label}</h4>
-                    <p className="text-cream font-medium">{fact.value}</p>
+                    <p className="text-cream font-medium text-sm">{fact.value}</p>
                   </div>
                 </motion.div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-4 pt-4">
+              {secondaryFacts.map((fact, index) => (
+                <div key={index} className="px-4 py-2 bg-white/5 border border-white/10 rounded-sm">
+                  <span className="block text-[9px] text-white/40 uppercase font-bold tracking-[0.2em]">{fact.label}</span>
+                  <span className="text-cream text-xs font-medium">{fact.value}</span>
+                </div>
               ))}
             </div>
 

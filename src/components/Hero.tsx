@@ -5,9 +5,10 @@ import { ArrowDown } from 'lucide-react';
 export function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
   const titles = [
-    "Former MLA — Bussy Constituency, Puducherry",
-    "Voice of the People. Servant of Tamil Nadu.",
-    "Elected MLA — Thiyagarayanagar, Chennai 2026"
+    "Minister for Urban Development — Government of TN",
+    "MLA — Thiyagarayanagar, Chennai 2026",
+    "General Secretary — Tamilaga Vettri Kazhagam",
+    "Former MLA — Bussy Constituency, Puducherry"
   ];
 
   useEffect(() => {
@@ -62,9 +63,9 @@ export function Hero() {
           </div>
 
           <div className="relative z-10 border-l-4 border-primary pl-8">
-            <h2 className="font-tamil text-4xl md:text-5xl text-cream italic mb-2 leading-tight">பொதுச்செயலாளர்</h2>
+            <h2 className="font-tamil text-4xl md:text-5xl text-cream italic mb-2 leading-tight">அமைச்சர்</h2>
             <h3 className="text-2xl md:text-3xl font-light text-primary mb-6 uppercase tracking-wider">
-              General Secretary
+              Minister | MLA | GS
             </h3>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold text-cream mb-6 tracking-tight leading-none">
@@ -132,8 +133,8 @@ export function Hero() {
             </div>
 
             <div className="z-30 text-center pb-8 opacity-100 transition-opacity">
-              <div className="text-primary font-tamil text-2xl md:text-3xl mb-1">Bussy N. Anand</div>
-              <div className="text-[10px] uppercase tracking-[0.3em] text-white/60">Visionary Leader</div>
+              <div className="text-primary font-tamil text-2xl md:text-3xl mb-1">Hon. Bussy N. Anand</div>
+              <div className="text-[10px] uppercase tracking-[0.3em] text-white/60">Minister, Govt of Tamil Nadu</div>
             </div>
           </div>
           

@@ -4,19 +4,19 @@ import { useEffect, useState } from 'react';
 
 export function Achievements() {
   const stats = [
-    { value: 20, suffix: "+", label: "Years in Public Service" },
-    { value: 51632, suffix: "", label: "Votes in 2026 Win" },
-    { value: 13027, suffix: "", label: "Vote Margin" },
-    { value: 1, suffix: " of 234", label: "Candidates Elected in 2026" },
+    { value: 51632, suffix: "", label: "Total Votes in 2026" },
+    { value: 13027, suffix: "", label: "Win Margin vs AIADMK" },
+    { value: 14615, suffix: "", label: "Win Margin vs DMK" },
+    { value: 2026, suffix: "", label: "Year Sworn in as Minister" },
   ];
 
   const cards = [
-    { title: "Grassroots Governance", desc: "MLA who personally led garbage collection and drain cleaning in Bussy constituency, Puducherry — funding civic work from his own resources. Proof that leadership means rolling up your sleeves." },
-    { title: "Founding General Secretary", desc: "Appointed on 2 February 2024 as the first-ever General Secretary of Tamilaga Vettri Kazhagam — hand-picked by Vijay to build a party from the ground up." },
+    { title: "Minister for Development", desc: "Hon. Bussy N. Anand serves as the Minister for Development & Public Welfare in the 2026 Tamil Nadu Cabinet, overseeing critical urban infrastructure projects." },
+    { title: "Defeating Heavyweights", desc: "In the 2026 T. Nagar election, he secured 51,632 votes, convincingly defeating AIADMK's B. Sathyanarayanan by 13,027 votes and DMK's candidate by 14,615 votes." },
     { title: "Historic 2026 Victory", desc: "Won Thiyagarayanagar assembly seat in Chennai — a constituency dominated by DMK and AIADMK for decades — with a commanding majority of 13,027 votes on TVK's debut election." },
     { title: "People's Voice", desc: "Served as TVK's primary public spokesperson, articulating party vision on governance, youth empowerment, and social justice across Tamil Nadu and Puducherry." },
-    { title: "Organizational Builder", desc: "Helped transform Vijay Makkal Iyakkam from a fan welfare association into a formal political party with over 1.5 crore registered members by 2025." },
-    { title: "Administrative Integrity", desc: "Throughout MLA tenure, maintained reputation for constitutional duty, social infrastructure focus, and direct community engagement without bureaucratic distance." },
+    { title: "Organizational Force", desc: "For over 15 years, he meticulously transformed the Vijay Makkal Iyakkam (VMI) from a fan-led welfare association into a high-discipline political infrastructure." },
+    { title: "Early Career Hub", desc: "Prior to his full-time political ascent, he managed successful ventures in real estate and operated a printing press, providing him with early practical experience in business and administration." },
   ];
 
   return (

@@ -1,4 +1,4 @@
-import { Flag } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Youtube, MapPin, Mail, Phone, Flag } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -17,26 +17,41 @@ export function Footer() {
           
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                <Flag className="w-5 h-5 text-primary animate-wave" />
+              <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center border border-primary/30 bg-dark/50">
+                <img src="https://i.ibb.co/V0920jFM/tvklogo-removebg-preview.png" alt="TVK Logo" className="w-full h-full object-contain transform scale-110" />
               </div>
               <span className="font-sans text-xl tracking-tight font-bold text-primary">
                 BUSSY N. ANAND
               </span>
             </div>
             <p className="text-white/60 leading-relaxed mb-6 max-w-md font-light">
-              General Secretary, Tamilaga Vettri Kazhagam. Dedicated to the progress and prosperity of Tamil Nadu and Puducherry through transparent governance and social justice.
+              Minister for Urban Development & Public Welfare, Government of Tamil Nadu. General Secretary, Tamilaga Vettri Kazhagam. Representing T. Nagar Constituency (Chennai).
             </p>
-            <p className="font-tamil text-xl text-cream font-medium italic">
-              "பொதுமக்கள் சேவையே எங்கள் லட்சியம்"
-            </p>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-primary mt-2">Public Service is our Goal</p>
+            <div className="flex gap-4">
+              <a href="https://twitter.com/BussyAnand" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
+                <Youtube className="w-5 h-5" />
+              </a>
+            </div>
+            <div className="mt-8">
+              <p className="font-tamil text-xl text-cream font-medium italic">
+                "பொதுமக்கள் சேவையே எங்கள் லட்சியம்"
+              </p>
+            </div>
           </div>
 
           <div>
             <h4 className="font-bold text-lg mb-6 border-b border-white/10 pb-2 inline-block">Quick Links</h4>
             <ul className="space-y-3">
-              {['Home', 'About', 'Journey', 'Achievements', 'TVK', 'Gallery'].map((link) => (
+              {['Home', 'About', 'Journey', 'Transparency', 'Constituency', 'Updates', 'Achievements'].map((link) => (
                 <li key={link}>
                   <a href={`#${link.toLowerCase().replace(' ', '')}`} className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-primary transition-colors"></span>
@@ -48,23 +63,19 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-6 border-b border-white/10 pb-2 inline-block">Connect</h4>
-            <ul className="space-y-4">
+            <h4 className="font-bold text-lg mb-6 border-b border-white/10 pb-2 inline-block">Office Hours</h4>
+            <ul className="space-y-4 text-sm text-white/50">
               <li>
-                <a href="#" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
-                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:border-primary hover:bg-primary/10 transition-all">
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                  </div>
-                  <span>@bussyanandoffl</span>
-                </a>
+                <span className="block font-bold text-primary text-[10px] uppercase tracking-widest">Weekdays</span>
+                <span className="block">10:00 AM — 06:00 PM</span>
               </li>
               <li>
-                <a href="#" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
-                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:border-primary hover:bg-primary/10 transition-all">
-                    <Flag className="w-4 h-4" />
-                  </div>
-                  <span>TVK Official</span>
-                </a>
+                <span className="block font-bold text-primary text-[10px] uppercase tracking-widest">Saturdays</span>
+                <span className="block">10:00 AM — 01:00 PM</span>
+              </li>
+              <li>
+                <span className="block font-bold text-primary text-[10px] uppercase tracking-widest">Sundays</span>
+                <span className="block">Closed (Special Meets Only)</span>
               </li>
             </ul>
           </div>

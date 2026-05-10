@@ -3,13 +3,14 @@ import { useInView } from 'react-intersection-observer';
 
 export function Timeline() {
   const milestones = [
-    { year: "1992", title: "Early Movement", desc: "Joined Vijay fan clubs; became part of early people's welfare movement." },
-    { year: "2006", title: "First Election Win", desc: "Elected MLA from Bussy Constituency, Puducherry under PMC. Defeated DMK's candidate, earning his iconic nickname 'Bussy'." },
-    { year: "2006–2011", title: "Grassroots Governance", desc: "As MLA: personally participated in garbage collection and drain cleaning, funding civic activities from his own pocket." },
-    { year: "2011 & 2016", title: "Continuing the Fight", desc: "Contested Oupalam constituency as an independent (2011) and under AINRC (2016), strictly fighting for the people." },
-    { year: "2024", title: "Inaugural General Secretary", desc: "Appointed inaugural General Secretary of TVK on Feb 2. Pivotal role in transforming the Iyakkam into a formal political force." },
-    { year: "2024–2025", title: "Party Expansion", desc: "Prominent TVK spokesperson. Led huge party expansion across Tamil Nadu. Declared TVK's leader would become Chief Minister." },
-    { year: "2026", title: "Historic Victory", desc: "Elected MLA from Thiyagarayanagar, Chennai with 51,632 votes. Historic win for TVK in a traditionally DMK/AIADMK dominated seat." },
+    { year: "1992", title: "Early Movement", desc: "Joined Vijay fan clubs, laying the foundation for what would become Vijay Makkal Iyakkam (VMI). Over 15 years, he transformed the fan base into a disciplined political infrastructure." },
+    { year: "2006", title: "First Election Win & 'Bussy'", desc: "Elected MLA from Bussy Constituency, Puducherry, under the Puducherry Munnetra Congress (PMC). His victory earned him the iconic lifelong nickname 'Bussy'." },
+    { year: "2006–2011", title: "Grassroots Governance", desc: "As MLA, personally led garbage collection and drain cleaning. Spent ₹75,000–₹85,000 monthly from his own resources to fund civic works for the people." },
+    { year: "2011", title: "Electoral Setback (Oupalam)", desc: "Contested from Oupalam as an independent. Secured 28.28% of the vote but faced a loss. Remained committed to grassroots work despite the result." },
+    { year: "2016", title: "AINRC Candidacy & Persistence", desc: "Contested Oupalam under AINRC, securing 20.07% of the vote. Although unsuccessful electorally, he continued building the movement full-time." },
+    { year: "2024", title: "Inaugural General Secretary", desc: "Appointed inaugural General Secretary of TVK on February 2, 2024. Hand-picked to transform the Iyakkam into a formal political party." },
+    { year: "2024–2025", title: "Party Expansion", desc: "Led massive membership drives across Tamil Nadu. Publicly declared that TVK's leader would become the Chief Minister of the state." },
+    { year: "2026", title: "Historic Victory & Ministerial Role", desc: "Elected T. Nagar MLA with 51,632 votes, defeating AIADMK's B. Sathyanarayanan by 13,027 votes. Sworn in as Minister for Urban Development & Public Welfare." },
   ];
 
   return (

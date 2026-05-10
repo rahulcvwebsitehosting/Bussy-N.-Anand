@@ -39,8 +39,19 @@ export function Contact() {
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Office Locations</h4>
-                      <p className="text-cream font-medium leading-relaxed mt-1">Puducherry & Chennai,<br />Tamil Nadu, India</p>
+                      <h4 className="text-[10px] font-bold text-white/40 uppercase tracking-widest">T. Nagar Constituency Office</h4>
+                      <p className="text-cream font-medium leading-relaxed mt-1">123, South Boag Road,<br />T. Nagar, Chennai - 600017</p>
+                      <p className="text-[10px] text-primary mt-2 font-bold uppercase tracking-widest">Office Hours: 10 AM - 5 PM</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full text-primary border border-primary/20">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="text-[10px] font-bold text-white/40 uppercase tracking-widest">PA Contact</h4>
+                      <p className="text-cream font-medium mt-1">+91 98XXX XXXXX</p>
                     </div>
                   </div>
 
@@ -105,12 +116,35 @@ export function Contact() {
                     />
                   </div>
                 </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-[10px] uppercase tracking-widest font-bold text-white/50 mb-2">Issue Category</label>
+                    <select className="w-full px-4 py-3 bg-dark border border-white/10 rounded-sm text-cream focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all">
+                      <option>General Inquiry</option>
+                      <option>Drainage / Sewage</option>
+                      <option>Roads / Maintenance</option>
+                      <option>Electricity / Street Lights</option>
+                      <option>Ration Card / Govt Services</option>
+                      <option>Others</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-[10px] uppercase tracking-widest font-bold text-white/50 mb-2">Ward (T. Nagar)</label>
+                    <select className="w-full px-4 py-3 bg-dark border border-white/10 rounded-sm text-cream focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all">
+                      <option>West Mambalam (Ward 140)</option>
+                      <option>T. Nagar (Ward 141)</option>
+                      <option>Pondy Bazaar (Ward 136)</option>
+                      <option>CIT Nagar (Ward 142)</option>
+                      <option>Kodambakkam (Ward 135)</option>
+                    </select>
+                  </div>
+                </div>
                 <div>
-                  <label className="block text-[10px] uppercase tracking-widest font-bold text-white/50 mb-2">Message</label>
+                  <label className="block text-[10px] uppercase tracking-widest font-bold text-white/50 mb-2">Message / Grievance</label>
                   <textarea 
                     rows={5}
                     className="w-full px-4 py-3 bg-dark border border-white/10 rounded-sm text-cream focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all resize-none placeholder:text-white/20"
-                    placeholder="How can we help?"
+                    placeholder="Describe your issue in detail..."
                   ></textarea>
                 </div>
                 <button 

@@ -3,6 +3,9 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Timeline } from './components/Timeline';
 import { Achievements } from './components/Achievements';
+import { Constituency } from './components/Constituency';
+import { Transparency } from './components/Transparency';
+import { Updates } from './components/Updates';
 import { TVK } from './components/TVK';
 import { Gallery } from './components/Gallery';
 import { Contact } from './components/Contact';
@@ -16,6 +19,9 @@ export default function App() {
       <main>
         <About />
         <Timeline />
+        <Transparency />
+        <Constituency />
+        <Updates />
         <Achievements />
         <TVK />
         <Gallery />
