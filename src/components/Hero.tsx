@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowDown } from 'lucide-react';
 
@@ -11,6 +11,19 @@ export function Hero() {
     "Former MLA — Bussy Constituency, Puducherry"
   ];
 
+  const particles = useMemo(() => {
+    return [...Array(30)].map((_, i) => ({
+      id: i,
+      size: Math.random() * 6 + 2,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      opacity: Math.random() * 0.4 + 0.1,
+      duration: Math.random() * 8 + 4,
+      delay: Math.random() * 5,
+      x: Math.random() > 0.5 ? [0, 50] : [0, -50]
+    }));
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setTitleIndex((prev) => (prev + 1) % titles.length);
@@ -22,27 +35,27 @@ export function Hero() {
     <section id="hero" className="relative min-h-screen bg-dark flex flex-col items-center justify-center overflow-hidden pt-20">
       {/* Particles */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {[...Array(30)].map((_, i) => (
+        {particles.map((p) => (
           <motion.div
-            key={i}
+            key={p.id}
             className="absolute rounded-full bg-accent blur-[1px]"
             style={{
-              width: Math.random() * 6 + 2 + 'px',
-              height: Math.random() * 6 + 2 + 'px',
-              left: Math.random() * 100 + '%',
-              top: Math.random() * 100 + '%',
-              opacity: Math.random() * 0.4 + 0.1
+              width: p.size + 'px',
+              height: p.size + 'px',
+              left: p.left + '%',
+              top: p.top + '%',
+              opacity: p.opacity
             }}
             animate={{
               y: [100, -500],
               opacity: [0, 0.8, 0],
-              x: Math.random() > 0.5 ? [0, 50] : [0, -50]
+              x: p.x
             }}
             transition={{
-              duration: Math.random() * 8 + 4,
+              duration: p.duration,
               repeat: Infinity,
               ease: "linear",
-              delay: Math.random() * 5
+              delay: p.delay
             }}
           />
         ))}
@@ -63,13 +76,21 @@ export function Hero() {
           </div>
 
           <div className="relative z-10 border-l-4 border-primary pl-8">
-            <h2 className="font-tamil text-5xl md:text-7xl text-white/5 uppercase opacity-20 absolute -top-12 -left-4 pointer-events-none select-none">அமைச்சர்</h2>
+            <h2 className="hidden font-tamil text-5xl md:text-7xl text-white/5 uppercase opacity-20 absolute -top-12 -left-4 pointer-events-none select-none">அமைச்சர்</h2>
             <h2 className="font-tamil text-3xl md:text-4xl text-cream italic mb-4 relative z-10">அமைச்சர்</h2>
             <h3 className="text-xl md:text-2xl font-light text-primary mb-8 uppercase tracking-wider">
               Minister | MLA | GS
             </h3>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold text-cream mb-6 tracking-tight leading-none relative z-10">
+            <h1 
+              className="text-5xl md:text-7xl lg:text-8xl font-bold text-cream mb-6 relative z-10"
+              style={{ 
+                fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif",
+                letterSpacing: '2px',
+                textTransform: 'none',
+                lineHeight: '1.1'
+              }}
+            >
               Bussy N. <span className="text-primary">Anand</span>
             </h1>
             
@@ -81,7 +102,14 @@ export function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.5 }}
-                  className="text-lg text-white/70 leading-relaxed max-w-md font-sans"
+                  className="text-lg text-white/70 max-w-md"
+                  style={{ 
+                    fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif",
+                    fontWeight: 400,
+                    letterSpacing: '4px',
+                    lineHeight: '1.1',
+                    textTransform: 'none'
+                  }}
                 >
                   {titles[titleIndex]}
                 </motion.p>

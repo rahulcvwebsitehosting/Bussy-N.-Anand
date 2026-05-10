@@ -62,7 +62,7 @@ export function TVK() {
               transition={{ delay: index * 0.1 }}
               className="bg-transparent p-6 rounded-sm border border-white/5 flex items-center gap-4 hover:border-primary/50 transition-all group"
             >
-              <div className="bg-primary/10 p-4 rounded-full text-primary group-hover:bg-primary group-hover:text-dark transition-colors">
+              <div className="bg-primary/10 p-4 rounded-full text-primary group-hover:bg-primary/25 group-hover:text-primary transition-colors">
                 {fact.icon}
               </div>
               <div>
@@ -112,7 +112,7 @@ export function TVK() {
                   animate={{ height: openAccordion === index ? 'auto' : 0, opacity: openAccordion === index ? 1 : 0 }}
                   className="overflow-hidden bg-[#061026]"
                 >
-                  <div className="px-6 pb-5 pl-14 pt-2">
+                  <div className="px-6 pb-5 pl-6 md:pl-14 pt-2">
                     <p className="text-white/60 leading-relaxed font-light">{m.desc}</p>
                   </div>
                 </motion.div>

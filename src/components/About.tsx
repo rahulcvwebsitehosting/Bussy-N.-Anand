@@ -75,7 +75,7 @@ export function About() {
                   transition={{ delay: 0.4 + (index * 0.1) }}
                   className="bg-transparent p-6 rounded-sm border border-white/5 border-l-4 border-l-primary hover:bg-white/5 hover:border-white/10 transition-colors flex items-start gap-4 group"
                 >
-                  <div className="text-primary bg-primary/10 p-3 rounded-full group-hover:bg-primary group-hover:text-dark transition-colors shrink-0">
+                  <div className="text-primary bg-primary/10 p-3 rounded-full group-hover:bg-primary/25 group-hover:text-primary transition-colors shrink-0">
                     {fact.icon}
                   </div>
                   <div>

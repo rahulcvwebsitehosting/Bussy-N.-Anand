@@ -30,7 +30,6 @@ h1, h2, h3, h4, h5, h6, .font-tamil, .tamil-text {
   line-height: 1.8;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  text-align: left;
   direction: ltr;
   letter-spacing: normal !important;
 }

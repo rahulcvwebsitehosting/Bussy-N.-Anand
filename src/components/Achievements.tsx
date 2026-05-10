@@ -52,8 +52,8 @@ export function Achievements() {
               className="bg-transparent p-8 rounded-sm border border-white/5 hover:border-primary/50 transition-all group relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-primary/20 group-hover:bg-primary transition-colors"></div>
-              <div className="w-12 h-12 bg-primary/10 rounded-none flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                <div className="w-4 h-4 bg-primary group-hover:bg-dark rotate-45 transition-colors"></div>
+              <div className="w-12 h-12 bg-primary/10 rounded-none flex items-center justify-center mb-6 group-hover:bg-primary/25 transition-colors">
+                <div className="w-4 h-4 bg-primary rotate-45 transition-colors"></div>
               </div>
               <h3 className="text-xl font-bold text-cream mb-4 group-hover:text-primary transition-colors uppercase tracking-wider">{card.title}</h3>
               <p className="text-white/60 leading-relaxed font-light">{card.desc}</p>

@@ -91,7 +91,7 @@ export function Updates() {
             <input 
               type="text" 
               placeholder="Your Phone / Email" 
-              className="flex-grow md:w-64 bg-dark border border-white/10 px-4 py-3 text-cream text-sm focus:outline-none focus:ring-1 focus:ring-primary rounded-sm"
+              className="w-full flex-grow md:w-64 bg-dark border border-white/10 px-4 py-3 text-cream text-sm focus:outline-none focus:ring-1 focus:ring-primary rounded-sm"
             />
             <button className="bg-primary text-dark font-bold px-6 py-3 text-[10px] uppercase tracking-widest rounded-sm hover:bg-cream transition-colors">
               Subscribe

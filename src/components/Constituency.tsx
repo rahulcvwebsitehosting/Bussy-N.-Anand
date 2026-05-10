@@ -12,7 +12,7 @@ function ConstituencyMap() {
         <AlertCircle className="w-8 h-8 text-primary/50 mb-4" />
         <p className="text-white/40 text-xs uppercase tracking-widest font-bold mb-2">Google Maps Key Required</p>
         <p className="text-[10px] text-white/30 leading-relaxed max-w-[200px]">
-          Please add GOOGLE_MAPS_PLATFORM_KEY to AI Studio Secrets to view the live constituency map.
+          Interactive constituency map — coming soon.
         </p>
       </div>
     );

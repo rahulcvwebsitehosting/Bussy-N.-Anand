@@ -25,15 +25,21 @@ export function Gallery() {
     },
     {
       src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/800px-Bussy_Anand.jpg",
-      alt: "Minister Swearing-in Ceremony",
-      ta: "அமைச்சராக பதவியேற்பு",
-      en: "Swearing-in as Minister"
-    },
-    {
-      src: "https://i.ibb.co/TM8dfcqW/Bussy-Remove-BG.png",
       alt: "Official Presidential Portrait",
       ta: "அதிகாரப்பூர்வ புகைப்படம்",
       en: "Official State Portrait"
+    },
+    {
+      src: "https://i.ibb.co/TM8dfcqW/Bussy-Remove-BG.png",
+      alt: "Portrait with Transparent Background",
+      ta: "தலைமைச் செயலகத்தில்",
+      en: "At the Secretariat"
+    },
+    {
+      src: "https://images.livemint.com/img/2024/02/02/600x338/TVK_1706871542152_1706871542385.JPEG",
+      alt: "Tamilaga Vettri Kazhagam Party Launch",
+      ta: "த.வெ.க கட்சித் தொடக்கம்",
+      en: "TVK Party Launch"
     },
     {
       src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/640px-Bussy_Anand.jpg",
@@ -42,16 +48,10 @@ export function Gallery() {
       en: "Public Grievance Redressal"
     },
     {
-      src: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Bussy_Anand_MLA.jpg",
-      alt: "Inspecting Monsoon Relief",
-      ta: "நிவாரண பணிகள் ஆய்வு",
-      en: "Monsoon Relief Inspection"
-    },
-    {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/400px-Bussy_Anand.jpg",
-      alt: "Legislative Assembly Session",
-      ta: "சட்டமன்ற நிகழ்வுகள்",
-      en: "At the Legislative Assembly"
+      src: "https://img.etimg.com/thumb/msid-107353982,width-1200,height-900,resizemode-4,imgsize-46938/thalapathy-vijay-political-party-tamilaga-vettri-kazhagam.jpg",
+      alt: "Political Vision and Leadership",
+      ta: "அரசியல் பார்வை",
+      en: "Political Vision"
     }
   ];
 
