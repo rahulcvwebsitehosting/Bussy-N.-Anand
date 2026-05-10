@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import { Facebook, Twitter, Instagram, Youtube, MapPin, Mail, Phone, Flag } from 'lucide-react';
+import { LegalModal, PrivacyContent, TermsContent } from './Legal';
 
 export function Footer() {
+  const [activeModal, setActiveModal] = useState<null | 'privacy' | 'terms'>(null);
+
   return (
     <footer className="bg-[#061026] text-cream relative pt-20 pb-8 overflow-hidden border-t border-white/5">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
@@ -82,16 +86,44 @@ export function Footer() {
 
         </div>
 
-        <div className="pt-8 border-t border-white/10 text-center md:flex md:justify-between md:items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} bussynanand.com. All rights reserved.
-          </p>
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="text-center md:text-left">
+            <p className="text-gray-500 text-xs mb-2">
+              &copy; {new Date().getFullYear()} Hon. Bussy N. Anand. All rights reserved.
+            </p>
+            <p className="text-primary/40 text-[10px] uppercase tracking-widest max-w-lg leading-relaxed">
+              This is an independent initiative and not the official website of the Government of Tamil Nadu, TVK, or Shri Bussy N. Anand.
+            </p>
+          </div>
           <div className="flex justify-center gap-6 text-sm text-gray-500">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            <button 
+              onClick={() => setActiveModal('privacy')}
+              className="hover:text-primary transition-colors uppercase text-[10px] tracking-widest font-bold"
+            >
+              Privacy Policy
+            </button>
+            <button 
+              onClick={() => setActiveModal('terms')}
+              className="hover:text-primary transition-colors uppercase text-[10px] tracking-widest font-bold"
+            >
+              Terms of Service
+            </button>
           </div>
         </div>
       </div>
+
+      <LegalModal 
+        isOpen={activeModal === 'privacy'}
+        onClose={() => setActiveModal(null)}
+        title="Privacy Policy"
+        content={<PrivacyContent />}
+      />
+      <LegalModal 
+        isOpen={activeModal === 'terms'}
+        onClose={() => setActiveModal(null)}
+        title="Terms of Service"
+        content={<TermsContent />}
+      />
     </footer>
   );
 }
