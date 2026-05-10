@@ -46,24 +46,6 @@ export function Constituency() {
     { name: "Ward 142", area: "CIT Nagar" }
   ];
 
-  const projects = [
-    { 
-      icon: <Droplets className="w-6 h-6" />, 
-      title: "Flood Mitigation", 
-      desc: "Upgrading the stormwater drain network across West Mambalam and T. Nagar to prevent monsoon waterlogging." 
-    },
-    { 
-      icon: <Zap className="w-6 h-6" />, 
-      title: "Smart Lighting", 
-      desc: "Installation of 500+ energy-efficient LED streetlights across all commercial and residential streets." 
-    },
-    { 
-      icon: <Construction className="w-6 h-6" />, 
-      title: "Pondy Bazaar Redevelopment", 
-      desc: "Phase 2 of the pedestrian-first smart city initiative to balance commerce with citizen comfort." 
-    }
-  ];
-
   return (
     <section id="constituency" className="py-24 bg-dark text-cream relative overflow-hidden">
       <div className="absolute inset-0 opacity-5 pointer-events-none">
@@ -117,7 +99,7 @@ export function Constituency() {
             </div>
           </motion.div>
 
-          {/* Local Projects */}
+          {/* Local Priorities */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -126,26 +108,25 @@ export function Constituency() {
           >
             <div className="flex items-center gap-3 mb-6">
               <Construction className="text-primary w-6 h-6" />
-              <h3 className="text-xl font-bold uppercase tracking-widest text-primary">Development Projects</h3>
+              <h3 className="text-xl font-bold uppercase tracking-widest text-primary">Development Priorities</h3>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {projects.map((project, idx) => (
-                <motion.div 
-                  key={idx}
-                  whileHover={{ y: -5 }}
-                  className="bg-secondary p-8 rounded-sm border border-white/5 shadow-xl group"
-                >
-                  <div className="text-primary mb-6 group-hover:scale-110 transition-transform">{project.icon}</div>
-                  <h4 className="text-xl font-bold text-cream mb-4">{project.title}</h4>
-                  <p className="text-white/60 text-sm leading-relaxed font-light">{project.desc}</p>
-                </motion.div>
-              ))}
+              <div className="bg-secondary p-8 rounded-sm border border-white/5 shadow-xl group col-span-1 md:col-span-2">
+                <p className="text-white/60 text-sm leading-relaxed font-light mb-6">
+                  Constituency development priorities for Thiyagarayanagar are being formulated through active community engagement. Our goal is to balance the commercial vitality of T. Nagar with residential peace and infrastructure resilience.
+                </p>
+                <div className="bg-primary/10 border border-primary/20 p-6 rounded-sm">
+                  <p className="text-primary text-xs font-bold leading-relaxed">
+                    Official masterplans and specific project announcements will be shared following detailed department assessments and ministerial approvals. 
+                  </p>
+                </div>
+              </div>
               
-              <div className="bg-primary/5 border-2 border-dashed border-primary/20 p-8 rounded-sm flex flex-col justify-center items-center text-center">
+              <div className="bg-primary/5 border-2 border-dashed border-primary/20 p-8 rounded-sm flex flex-col justify-center items-center text-center col-span-1 md:col-span-2">
                 <Users className="text-primary/40 w-12 h-12 mb-4" />
-                <h4 className="text-cream font-bold mb-2">Next Milestone: Citizens' Meet</h4>
-                <p className="text-white/40 text-xs">Join us for the monthly grievance session at the Constituency Office.</p>
+                <h4 className="text-cream font-bold mb-2">Constituency Service</h4>
+                <p className="text-white/40 text-xs">For urgent grievances or support, please visit our office or use the online portal.</p>
                 <a href="#contact" className="mt-6 text-primary text-[10px] font-bold uppercase tracking-widest hover:underline">Submit Grievance Online →</a>
               </div>
             </div>

@@ -5,7 +5,7 @@ import { ArrowDown } from 'lucide-react';
 export function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
   const titles = [
-    "Minister for Urban Development — Government of TN",
+    "Minister, Government of Tamil Nadu",
     "MLA — Thiyagarayanagar, Chennai 2026",
     "General Secretary — Tamilaga Vettri Kazhagam",
     "Former MLA — Bussy Constituency, Puducherry"

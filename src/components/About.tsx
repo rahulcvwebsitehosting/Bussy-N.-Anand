@@ -4,13 +4,13 @@ import { Calendar, User, MapPin, Award } from 'lucide-react';
 export function About() {
   const bioFacts = [
     { icon: <Calendar />, label: "Born", value: "18 July 1964, Puducherry" },
-    { icon: <Award />, label: "Cabinet Role", value: "Minister for Urban Development, TN" },
+    { icon: <Award />, label: "Cabinet Role", value: "Minister, Govt of Tamil Nadu" },
     { icon: <User />, label: "Education", value: "8th Std (Pass), Calve College (1981)" },
     { icon: <MapPin />, label: "Constituency", value: "T. Nagar (MLA 2026)" },
   ];
 
   const secondaryFacts = [
-    { label: "Financial Transparency", value: "₹7.48 Cr Assets (2026 Affinity)" },
+    { label: "Financial Transparency", value: "₹7.48 Crore — Election Commission Affidavit, 2026" },
     { label: "Early Career", value: "Real Estate & Printing Press" },
   ];
 
@@ -62,7 +62,7 @@ export function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-xl md:text-2xl text-white/70 leading-relaxed font-light">
-              "Hon. Bussy N. Anand currently serves as the Minister for Urban Development & Public Welfare in the Government of Tamil Nadu and the General Secretary of Tamizhaga Vetri Kazhagam (TVK). He earned the nickname 'Bussy' after his landmark 2006 election win from the Bussy constituency in Puducherry. Having previously served as an MLA for Puducherry, he now represents T. Nagar in Chennai following a decisive victory in the 2026 Assembly Elections."
+              "Hon. Bussy N. Anand currently serves as a Minister in the Government of Tamil Nadu and the General Secretary of Tamizhaga Vetri Kazhagam (TVK). He earned the nickname 'Bussy' after his landmark 2006 election win from the Bussy constituency in Puducherry. Having previously served as an MLA for Puducherry, he now represents T. Nagar in Chennai following a decisive victory in the 2026 Assembly Elections."
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

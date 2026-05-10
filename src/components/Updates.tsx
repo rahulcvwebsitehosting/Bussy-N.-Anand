@@ -5,21 +5,21 @@ export function Updates() {
   const news = [
     {
       date: "May 10, 2026",
-      title: "Sworn in as Minister for Development & Public Welfare",
-      desc: "Following the historic victory in T. Nagar, Hon. Bussy N. Anand was sworn in as one of the 9 key ministers in the new Tamil Nadu cabinet.",
+      title: "Sworn in as Minister, Government of Tamil Nadu",
+      desc: "Following the historic victory in T. Nagar, Shri Bussy N. Anand was sworn in as a member of the new Tamil Nadu cabinet.",
       category: "Cabinet Update"
     },
     {
       date: "May 8, 2026",
-      title: "Constituency Grievance Meet Scheduled",
-      desc: "The first post-election grievance redressal session for T. Nagar residents will be held at the South Boag Road office on May 15.",
+      title: "Constituency Grievance Channel Open",
+      desc: "The digital grievance portal for T. Nagar residents is now active. Citizens are encouraged to submit their concerns directly for review.",
       category: "Constituency"
     },
     {
       date: "May 5, 2026",
-      title: "Flood Mitigation Project Phase 1 Approval",
-      desc: "Minister-designate Bussy Anand reviewed and approved the urgent stormwater drain upgrades for West Mambalam ward.",
-      category: "Infrastructure"
+      title: "TVK Party Strengthening Meet",
+      desc: "General Secretary Bussy Anand presided over the district secretaries' meet to outline the party's future roadmap.",
+      category: "Party News"
     }
   ];
 

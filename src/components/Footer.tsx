@@ -29,8 +29,13 @@ export function Footer() {
               </span>
             </div>
             <p className="text-white/60 leading-relaxed mb-6 max-w-md font-light">
-              Minister for Urban Development & Public Welfare, Government of Tamil Nadu. General Secretary, Tamilaga Vettri Kazhagam. Representing T. Nagar Constituency (Chennai).
+              Minister, Government of Tamil Nadu. General Secretary, Tamilaga Vettri Kazhagam. Representing T. Nagar Constituency (Chennai).
             </p>
+            <div className="mb-6 p-3 border border-primary/20 bg-primary/5 rounded-sm">
+               <p className="text-primary text-[10px] font-bold uppercase tracking-[0.2em] leading-relaxed">
+                 Disclaimer: This is an independent initiative and not the official website of the Government of Tamil Nadu, TVK, or Shri Bussy N. Anand.
+               </p>
+            </div>
             <div className="flex gap-4">
               <a href="https://x.com/BussyAnand?lang=en" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
                 <Twitter className="w-5 h-5" />

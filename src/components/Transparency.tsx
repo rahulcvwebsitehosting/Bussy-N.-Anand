@@ -4,19 +4,19 @@ import { Shield, Info, Gavel, Landmark } from 'lucide-react';
 export function Transparency() {
   const cases = [
     { 
-      case: "Karur Stampede (2025)", 
-      details: "Following a tragic incident at a TVK rally, the CBI is investigating the circumstances. Hon. Bussy Anand was named in the FIR.", 
-      status: "Investigation Pending" 
+      case: "Karur Stampede Case", 
+      details: "CBI investigation; charges include attempt to commit culpable homicide.", 
+      status: "Sub-judice" 
     },
     { 
       case: "Trichy Airport Case", 
-      details: "Related to allegations of unlawful assembly and assault on a public servant.", 
-      status: "Legal Proceedings Ongoing" 
+      details: "Unlawful assembly and assault on public servant.", 
+      status: "Sub-judice" 
     },
     { 
       case: "R1 Mambalam Case", 
-      details: "Various charges related to political activities and demonstrations.", 
-      status: "Pending" 
+      details: "Various charges as per official records.", 
+      status: "Sub-judice" 
     }
   ];
 
