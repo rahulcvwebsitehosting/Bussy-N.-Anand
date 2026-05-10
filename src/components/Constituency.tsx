@@ -1,5 +1,41 @@
 import { motion } from 'motion/react';
-import { Map, Zap, Droplets, Construction, Users } from 'lucide-react';
+import { Map as MapIcon, Zap, Droplets, Construction, Users, AlertCircle } from 'lucide-react';
+import { APIProvider, Map, AdvancedMarker, Pin } from '@vis.gl/react-google-maps';
+
+const API_KEY = process.env.GOOGLE_MAPS_PLATFORM_KEY || '';
+const hasValidKey = Boolean(API_KEY);
+
+function ConstituencyMap() {
+  if (!hasValidKey) {
+    return (
+      <div className="w-full h-full bg-dark/50 flex flex-col items-center justify-center p-6 text-center">
+        <AlertCircle className="w-8 h-8 text-primary/50 mb-4" />
+        <p className="text-white/40 text-xs uppercase tracking-widest font-bold mb-2">Google Maps Key Required</p>
+        <p className="text-[10px] text-white/30 leading-relaxed max-w-[200px]">
+          Please add GOOGLE_MAPS_PLATFORM_KEY to AI Studio Secrets to view the live constituency map.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <APIProvider apiKey={API_KEY}>
+      <Map
+        defaultCenter={{ lat: 13.0405, lng: 80.2337 }}
+        defaultZoom={14}
+        mapId="DEMO_MAP_ID"
+        internalUsageAttributionIds={['gmp_mcp_codeassist_v1_aistudio']}
+        style={{ width: '100%', height: '100%' }}
+        gestureHandling={'greedy'}
+        disableDefaultUI={true}
+      >
+        <AdvancedMarker position={{ lat: 13.0405, lng: 80.2337 }}>
+          <Pin background="#f3b33d" glyphColor="#061026" borderColor="#f3b33d" />
+        </AdvancedMarker>
+      </Map>
+    </APIProvider>
+  );
+}
 
 export function Constituency() {
   const wards = [
@@ -58,19 +94,13 @@ export function Constituency() {
           >
             <div className="bg-white/5 border border-white/10 rounded-sm p-6 relative overflow-hidden">
               <div className="flex items-center gap-3 mb-6">
-                <Map className="text-primary w-5 h-5" />
+                <MapIcon className="text-primary w-5 h-5" />
                 <h3 className="text-lg font-bold uppercase tracking-widest text-primary">Constituency Map</h3>
               </div>
-              <div className="aspect-square bg-dark/50 border border-white/5 rounded-sm flex items-center justify-center relative overflow-hidden">
-                {/* Simulated Map SVG */}
-                <svg className="w-4/5 h-4/5 text-primary/20" viewBox="0 0 100 100">
-                  <path d="M20,20 L80,15 L85,80 L15,85 Z" fill="currentColor" />
-                  <path d="M40,20 L45,85" stroke="currentColor" strokeWidth="0.5" />
-                  <path d="M20,50 L85,45" stroke="currentColor" strokeWidth="0.5" />
-                  <circle cx="50" cy="50" r="3" fill="currentColor" />
-                </svg>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="bg-primary/90 text-dark px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full">T. Nagar</span>
+              <div className="aspect-square border border-white/5 rounded-sm overflow-hidden relative">
+                <ConstituencyMap />
+                <div className="absolute top-4 right-4 pointer-events-none">
+                  <span className="bg-primary/90 text-dark px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">Live: T. Nagar</span>
                 </div>
               </div>
               <div className="mt-8">
