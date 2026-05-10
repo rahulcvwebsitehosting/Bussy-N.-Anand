@@ -24,13 +24,13 @@ export function Gallery() {
       en: "T. Nagar Election Campaign"
     },
     {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/800px-Bussy_Anand.jpg",
+      src: "https://raw.githubusercontent.com/rahulcvwebsitehosting/ImageStorage/main/BussyNAnand%20Images/OfficialStatePortrait.png",
       alt: "Official Presidential Portrait",
       ta: "அதிகாரப்பூர்வ புகைப்படம்",
       en: "Official State Portrait"
     },
     {
-      src: "https://i.ibb.co/TM8dfcqW/Bussy-Remove-BG.png",
+      src: "https://raw.githubusercontent.com/rahulcvwebsitehosting/ImageStorage/main/BussyNAnand%20Images/AttheSecretariat.png",
       alt: "Portrait with Transparent Background",
       ta: "தலைமைச் செயலகத்தில்",
       en: "At the Secretariat"
