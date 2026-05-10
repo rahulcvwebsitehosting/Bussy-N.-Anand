@@ -20,7 +20,7 @@ export function Achievements() {
   ];
 
   return (
-    <section id="achievements" className="py-24 bg-[#061026] text-cream relative border-t border-white/5">
+    <section id="achievements" className="py-24 bg-[#3D0606] text-cream relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -33,7 +33,7 @@ export function Achievements() {
         </motion.div>
 
         {/* Counters */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 w-full gap-4 mb-20 bg-[#061026] border border-white/5 rounded-sm overflow-hidden p-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 w-full gap-4 mb-20 bg-[#3D0606] border border-white/10 rounded-sm overflow-hidden p-4">
           {stats.map((stat, index) => (
             <Counter key={index} end={stat.value} suffix={stat.suffix} label={stat.label} delay={index * 0.1} />
           ))}

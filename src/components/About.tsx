@@ -41,7 +41,7 @@ export function About() {
               <div className="absolute inset-0 border border-primary/30 rounded-t-[100px] opacity-30"></div>
               <div className="absolute inset-2 border-4 border-primary/10 rounded-t-[100px] z-10"></div>
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Bussy_Anand_MLA.jpg" 
+                src="https://raw.githubusercontent.com/rahulcvwebsitehosting/ImageStorage/main/BussyNAnand%20Images/BussyNew.avif" 
                 alt="Bussy Anand Portrait" 
                 className="relative z-20 rounded-t-[100px] w-full object-cover shadow-2xl shadow-primary/5 aspect-[3/4] filter grayscale hover:grayscale-0 transition-all duration-700"
                 onError={(e) => {

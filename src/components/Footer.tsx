@@ -6,7 +6,7 @@ export function Footer() {
   const [activeModal, setActiveModal] = useState<null | 'privacy' | 'terms'>(null);
 
   return (
-    <footer className="bg-[#061026] text-cream relative pt-20 pb-8 overflow-hidden border-t border-white/5">
+    <footer className="bg-[#3D0606] text-cream relative pt-20 pb-8 overflow-hidden border-t border-white/10">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
 
       {/* Background Watermark */}

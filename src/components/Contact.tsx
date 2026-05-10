@@ -16,7 +16,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#061026] relative border-t border-white/5">
+    <section id="contact" className="py-24 bg-[#3D0606] relative border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

@@ -148,7 +148,7 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dark z-30 pointer-events-none"></div>
             
             <img 
-              src="https://i.ibb.co/TM8dfcqW/Bussy-Remove-BG.png" 
+              src="https://raw.githubusercontent.com/rahulcvwebsitehosting/ImageStorage/main/BussyNAnand%20Images/BussyRemoveBG.png" 
               alt="Bussy N. Anand" 
               className="absolute inset-0 w-full h-full object-contain object-bottom transition-all duration-700 z-20"
               onError={(e) => {

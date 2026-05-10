@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tiro+Tamil:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Tiro+Tamil:ital@0;1&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #E8A020;
-  --color-secondary: #8B1A1A;
-  --color-dark: #0D1B3E;
+  --color-primary: #F5C518;
+  --color-secondary: #3B0808;
+  --color-dark: #850F0F;
   --color-accent: #FFD700;
   --color-cream: #FFF8E7;
   --color-earth: #2D5A27;
@@ -25,8 +25,14 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6, .font-tamil, .tamil-text {
-  font-family: var(--font-tamil);
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.font-tamil, .tamil-text {
+  font-family: 'Noto Sans Tamil', 'Tiro Tamil', Latha, Vijaya, sans-serif;
   line-height: 1.8;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -52,7 +58,7 @@ h1, h2, h3, h4, h5, h6, .font-tamil, .tamil-text {
 
 /* Terracotta texture */
 .bg-terracotta {
-  background-color: #8B1A1A;
+  background-color: #5C1010;
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23a)' opacity='0.15'/%3E%3C/svg%3E");
 }
 

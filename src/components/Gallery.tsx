@@ -18,7 +18,7 @@ export function Gallery() {
 
   const images = [
     {
-      src: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Bussy_Anand_MLA.jpg",
+      src: "https://raw.githubusercontent.com/rahulcvwebsitehosting/ImageStorage/main/BussyNAnand%20Images/TNagarElecCamp.png",
       alt: "Campaigning in T. Nagar",
       ta: "தி. நகர் தேர்தல் பிரச்சாரம்",
       en: "T. Nagar Election Campaign"

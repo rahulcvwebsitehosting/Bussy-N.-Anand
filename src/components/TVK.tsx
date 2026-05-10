@@ -76,7 +76,7 @@ export function TVK() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6 }}
-            className="md:col-span-2 lg:col-span-3 bg-[#8B1A1A] p-6 rounded-sm border-l-4 border-primary flex flex-col items-center justify-center"
+            className="md:col-span-2 lg:col-span-3 bg-[#3B0808] p-6 rounded-sm border-l-4 border-primary flex flex-col items-center justify-center"
           >
             <p className="text-xs font-bold text-accent uppercase tracking-widest mb-2">Motto</p>
             <p className="font-tamil text-2xl md:text-3xl text-cream font-bold">"வேலை! உயர்வு! உன்னால் முடியும்!"</p>
@@ -110,7 +110,7 @@ export function TVK() {
                 <motion.div 
                   initial={false}
                   animate={{ height: openAccordion === index ? 'auto' : 0, opacity: openAccordion === index ? 1 : 0 }}
-                  className="overflow-hidden bg-[#061026]"
+                  className="overflow-hidden bg-[#3D0606]"
                 >
                   <div className="px-6 pb-5 pl-6 md:pl-14 pt-2">
                     <p className="text-white/60 leading-relaxed font-light">{m.desc}</p>

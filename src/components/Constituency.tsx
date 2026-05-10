@@ -1,39 +1,22 @@
 import { motion } from 'motion/react';
-import { Map as MapIcon, Zap, Droplets, Construction, Users, AlertCircle } from 'lucide-react';
-import { APIProvider, Map, AdvancedMarker, Pin } from '@vis.gl/react-google-maps';
-
-const API_KEY = process.env.GOOGLE_MAPS_PLATFORM_KEY || '';
-const hasValidKey = Boolean(API_KEY);
+import { Map as MapIcon, Zap, Droplets, Construction, Users } from 'lucide-react';
 
 function ConstituencyMap() {
-  if (!hasValidKey) {
-    return (
-      <div className="w-full h-full bg-dark/50 flex flex-col items-center justify-center p-6 text-center">
-        <AlertCircle className="w-8 h-8 text-primary/50 mb-4" />
-        <p className="text-white/40 text-xs uppercase tracking-widest font-bold mb-2">Google Maps Key Required</p>
-        <p className="text-[10px] text-white/30 leading-relaxed max-w-[200px]">
-          Interactive constituency map — coming soon.
-        </p>
-      </div>
-    );
-  }
-
   return (
-    <APIProvider apiKey={API_KEY}>
-      <Map
-        defaultCenter={{ lat: 13.0405, lng: 80.2337 }}
-        defaultZoom={14}
-        mapId="DEMO_MAP_ID"
-        internalUsageAttributionIds={['gmp_mcp_codeassist_v1_aistudio']}
-        style={{ width: '100%', height: '100%' }}
-        gestureHandling={'greedy'}
-        disableDefaultUI={true}
-      >
-        <AdvancedMarker position={{ lat: 13.0405, lng: 80.2337 }}>
-          <Pin background="#f3b33d" glyphColor="#061026" borderColor="#f3b33d" />
-        </AdvancedMarker>
-      </Map>
-    </APIProvider>
+    <div className="w-full h-full relative bg-dark">
+      <iframe
+        width="100%"
+        height="100%"
+        frameBorder="0"
+        scrolling="no"
+        marginHeight={0}
+        marginWidth={0}
+        src="https://www.openstreetmap.org/export/embed.html?bbox=80.211%2C13.023%2C80.256%2C13.058&amp;layer=mapnik&amp;marker=13.0405%2C80.2337"
+        className="grayscale invert opacity-60 contrast-125"
+        title="T. Nagar Constituency Map"
+      ></iframe>
+      <div className="absolute inset-0 pointer-events-none bg-primary/5 ring-1 ring-inset ring-primary/20"></div>
+    </div>
   );
 }
 
