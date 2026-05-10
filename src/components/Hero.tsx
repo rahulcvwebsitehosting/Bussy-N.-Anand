@@ -1,0 +1,172 @@
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { ArrowDown } from 'lucide-react';
+
+export function Hero() {
+  const [titleIndex, setTitleIndex] = useState(0);
+  const titles = [
+    "Former MLA — Bussy Constituency, Puducherry",
+    "Voice of the People. Servant of Tamil Nadu.",
+    "Elected MLA — Thiyagarayanagar, Chennai 2026"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTitleIndex((prev) => (prev + 1) % titles.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section id="hero" className="relative min-h-screen bg-dark flex flex-col items-center justify-center overflow-hidden pt-20">
+      {/* Particles */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {[...Array(30)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-accent blur-[1px]"
+            style={{
+              width: Math.random() * 6 + 2 + 'px',
+              height: Math.random() * 6 + 2 + 'px',
+              left: Math.random() * 100 + '%',
+              top: Math.random() * 100 + '%',
+              opacity: Math.random() * 0.4 + 0.1
+            }}
+            animate={{
+              y: [100, -500],
+              opacity: [0, 0.8, 0],
+              x: Math.random() > 0.5 ? [0, 50] : [0, -50]
+            }}
+            transition={{
+              duration: Math.random() * 8 + 4,
+              repeat: Infinity,
+              ease: "linear",
+              delay: Math.random() * 5
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col-reverse lg:flex-row items-center gap-12 mt-10 lg:mt-0">
+        <motion.div 
+          className="lg:w-1/2 text-left flex flex-col items-start relative"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Decorative Corner SVG */}
+          <div className="absolute -top-10 -left-10 w-40 h-40 opacity-20 pointer-events-none hidden lg:block">
+            <svg className="text-primary" fill="currentColor" viewBox="0 0 100 100">
+              <path d="M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z" />
+            </svg>
+          </div>
+
+          <div className="relative z-10 border-l-4 border-primary pl-8">
+            <h2 className="font-tamil text-4xl md:text-5xl text-cream italic mb-2 leading-tight">பொதுச்செயலாளர்</h2>
+            <h3 className="text-2xl md:text-3xl font-light text-primary mb-6 uppercase tracking-wider">
+              General Secretary
+            </h3>
+            
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold text-cream mb-6 tracking-tight leading-none">
+              Bussy N. <span className="text-primary">Anand</span>
+            </h1>
+            
+            <div className="h-20 flex items-center justify-start w-full mb-8">
+              <AnimatePresence mode="wait">
+                <motion.p 
+                  key={titleIndex}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-lg text-white/70 leading-relaxed max-w-md font-sans"
+                >
+                  {titles[titleIndex]}
+                </motion.p>
+              </AnimatePresence>
+            </div>
+
+            <motion.a 
+              href="#timeline"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-primary text-dark px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest shadow-xl shadow-primary/10 transition-transform inline-flex items-center gap-3 w-fit"
+            >
+              Know His Journey
+              <ArrowDown className="w-4 h-4 animate-bounce" />
+            </motion.a>
+          </div>
+        </motion.div>
+
+        <motion.div 
+          className="lg:w-1/2 flex items-center justify-center relative w-full h-full min-h-[400px] mt-10 lg:mt-0"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2, type: "spring" }}
+        >
+          {/* Decorative Backdrop Circle */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none hidden lg:flex">
+            <svg className="w-full h-full text-primary" viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="0.5">
+              <circle cx="100" cy="100" r="80" />
+              <circle cx="100" cy="100" r="60" />
+              <circle cx="100" cy="100" r="40" />
+              <path d="M100 20V180M20 100H180" />
+            </svg>
+          </div>
+
+          <div className="relative w-72 h-80 md:w-80 md:h-96 bg-gray-800 rounded-t-[100px] border-8 border-primary/20 shadow-2xl flex flex-col items-center justify-end overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark/40 to-dark z-20 pointer-events-none"></div>
+            
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Bussy_Anand_MLA.jpg" 
+              alt="Bussy N. Anand" 
+              className="absolute inset-0 w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-700 opacity-60 mix-blend-screen"
+              onError={(e) => {
+                e.currentTarget.src = 'https://ui-avatars.com/api/?name=Bussy+N.+Anand&size=600&background=0D1B3E&color=E8A020&font-size=0.33';
+              }}
+            />
+            
+            {/* TVK Background Text */}
+            <div className="absolute top-0 left-0 w-full h-full bg-primary/10 flex items-center justify-center z-10">
+               <span className="text-white/10 text-8xl font-bold uppercase transform -rotate-12 select-none pointer-events-none">TVK</span>
+            </div>
+
+            <div className="z-30 text-center pb-8 opacity-100 transition-opacity">
+              <div className="text-primary font-tamil text-2xl md:text-3xl mb-1">Bussy N. Anand</div>
+              <div className="text-[10px] uppercase tracking-[0.3em] text-white/60">Visionary Leader</div>
+            </div>
+          </div>
+          
+          <div className="absolute bottom-0 lg:-bottom-10 right-0 lg:right-10 w-48 lg:w-64 p-4 lg:p-6 bg-secondary border-l-4 border-accent shadow-2xl z-40 hidden md:block">
+            <p className="text-[10px] lg:text-xs italic leading-relaxed text-cream">
+              "To advocate for the unvoiced and establish a governance model rooted in social justice."
+            </p>
+            <p className="text-[8px] lg:text-[10px] font-bold mt-2 text-accent uppercase">— Our Mission</p>
+          </div>
+        </motion.div>
+      </div>
+      
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden md:block">
+        <motion.div
+          animate={{ y: [0, 12, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <a href="#about" className="flex flex-col items-center gap-2 cursor-pointer text-primary hover:text-accent transition-colors">
+            <span className="text-xs uppercase tracking-widest font-bold">Scroll</span>
+            <div className="w-6 h-10 border-2 border-current rounded-full flex justify-center pt-2 shadow-[0_0_10px_rgba(232,160,32,0.3)]">
+              <div className="w-1.5 h-1.5 bg-current rounded-full" />
+            </div>
+          </a>
+        </motion.div>
+      </div>
+      {/* Vertical Text Decoration Right Side */}
+      <div className="absolute right-8 top-1/2 -translate-y-1/2 flex-col gap-6 z-20 hidden lg:flex items-center">
+        <div className="w-[1px] h-32 bg-gradient-to-b from-transparent via-primary to-transparent"></div>
+        <div className="[writing-mode:vertical-rl] text-[10px] tracking-[0.5em] text-primary/50 uppercase font-bold">
+          Tamilaga Vettri Kazhagam
+        </div>
+        <div className="w-[1px] h-32 bg-gradient-to-b from-transparent via-primary to-transparent"></div>
+      </div>
+    </section>
+  );
+}
