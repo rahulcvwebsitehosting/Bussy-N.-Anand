@@ -38,21 +38,21 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             
-            <div className="flex items-center gap-4 min-w-0 overflow-hidden">
-              <div className="w-14 h-14 flex items-center justify-center aspect-square overflow-hidden shrink-0">
+            <div className="flex items-center gap-4 shrink-0">
+              <div className="w-12 h-12 flex items-center justify-center aspect-square overflow-hidden shrink-0">
                 <img src="https://i.ibb.co/V0920jFM/tvklogo-removebg-preview.png" alt="TVK Logo" className="w-full h-full object-contain rounded-full" />
               </div>
-              <div className="flex flex-col min-w-0">
-                <span className={`font-sans text-xl font-bold text-primary ${isTamil ? 'font-tamil' : 'tracking-tight'}`}>
+              <div className="flex flex-col shrink-0 min-w-max">
+                <span className={`font-sans text-lg md:text-xl font-bold text-primary ${isTamil ? 'font-tamil' : 'tracking-tight'}`}>
                   {isTamil ? 'புஸ்ஸி என். ஆனந்த்' : 'BUSSY N. ANAND'}
                 </span>
-                <span className={`text-[10px] uppercase opacity-80 text-cream truncate ${isTamil ? 'font-tamil' : 'tracking-[0.2em]'}`}>
+                <span className={`text-[9px] md:text-[10px] uppercase opacity-80 text-cream ${isTamil ? 'font-tamil' : 'tracking-[0.2em]'}`}>
                   {isTamil ? 'அமைச்சர் | சட்டமன்ற உறுப்பினர் | த.வெ.க' : 'Minister | MLA | General Secretary, TVK'}
                 </span>
               </div>
             </div>
 
-            <div className="hidden md:flex items-center gap-8 text-[10px] font-bold tracking-widest uppercase">
+            <div className="hidden xl:flex items-center gap-4 2xl:gap-6 text-[10px] font-bold tracking-widest uppercase shrink-0">
               {navLinks.map((link) => (
                 <a key={link.en} href={link.href} className={`text-cream/80 hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary pb-1 ${isTamil ? 'font-tamil tracking-normal' : ''}`}>
                   {isTamil ? link.ta : link.en}
@@ -60,14 +60,14 @@ export function Navbar() {
               ))}
               <button 
                 onClick={() => setIsTamil(!isTamil)}
-                className="px-6 py-2 border border-primary rounded-full text-[10px] uppercase tracking-widest hover:bg-primary hover:text-dark transition-all text-cream"
+                className="px-4 py-2 border border-primary rounded-full text-[10px] uppercase tracking-widest hover:bg-primary hover:text-dark transition-all text-cream whitespace-nowrap"
               >
                 Tamil / English
               </button>
             </div>
 
             <button 
-              className="md:hidden text-cream p-2" 
+              className="xl:hidden text-cream p-2 shrink-0" 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
@@ -82,7 +82,7 @@ export function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="absolute top-full left-0 w-full md:hidden bg-dark border-b border-primary/30 shadow-xl max-h-[80vh] overflow-y-auto z-[70]"
+              className="absolute top-full left-0 w-full xl:hidden bg-dark border-b border-primary/30 shadow-xl max-h-[80vh] overflow-y-auto z-[70]"
             >
               <div className="flex flex-col px-4 py-6 space-y-4">
                 {navLinks.map((link) => (

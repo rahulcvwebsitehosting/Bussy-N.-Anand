@@ -1,9 +1,10 @@
 import { motion } from 'motion/react';
-import { ChevronDown, Flag, Users, Heart, Target, Lightbulb, MapPin, CheckCircle2 } from 'lucide-react';
+import { ChevronDown, Flag, Users, Heart, Target, Lightbulb, MapPin, CheckCircle2, FileText, BookOpen, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 
 export function TVK() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
+  const [showManifestoEmbed, setShowManifestoEmbed] = useState(false);
 
   const keyFacts = [
     { icon: <Flag />, label: "Founded", value: "2 February 2024" },
@@ -118,6 +119,107 @@ export function TVK() {
               </motion.div>
             ))}
           </div>
+
+          {/* New Interactive 2026 Manifesto Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 bg-gradient-to-br from-[#3D0606] to-dark border border-primary/25 rounded-sm p-6 md:p-10 relative overflow-hidden shadow-2xl"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 border-b border-white/10 pb-6">
+              <div>
+                <div className="flex items-center gap-2 text-primary mb-2">
+                  <FileText className="w-4 h-4" />
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] font-bold">Official Document Launch</span>
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-cream tracking-tight">
+                  2026 Tamil Nadu Development Manifesto
+                </h3>
+                <p className="font-tamil text-xs text-primary/70 font-semibold mt-1">
+                  த.வெ.க கொள்கை மற்றும் 2026 தேர்தல் அறிக்கை
+                </p>
+              </div>
+              
+              <div className="flex gap-2">
+                <a 
+                  href="https://github.com/rahulcvwebsitehosting/ImageStorage/raw/d084feaa6f886c2ea2c46c7175e1aff290d9e2f8/BussyNAnand%20Images/TVK%20MANIFESTO.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-transparent text-cream hover:bg-white/5 border border-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-widest rounded-sm transition-all flex items-center gap-2 shrink-0"
+                >
+                  <ExternalLink className="w-3 h-3 text-primary" />
+                  Manifesto Link
+                </a>
+                <button
+                  onClick={() => setShowManifestoEmbed(!showManifestoEmbed)}
+                  className="bg-primary text-dark hover:bg-accent px-4 py-2 text-[10px] font-bold uppercase tracking-widest rounded-sm transition-all flex items-center gap-2 shrink-0 shadow-lg"
+                >
+                  <BookOpen className="w-3 h-3" />
+                  {showManifestoEmbed ? 'Close Reader' : 'View Full Manifesto →'}
+                </button>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+              <div className={showManifestoEmbed ? "md:col-span-12" : "md:col-span-8"}>
+                <p className="text-white/80 text-sm md:text-base leading-relaxed font-light mb-4 text-left">
+                  In the 2026 elections, TVK released its vision document for Tamil Nadu's development. This landmark public policy framework details comprehensive resolutions for complete administrative transparency, women-led monthly welfare grants, and high-performance government systems.
+                </p>
+                <p className="font-tamil text-white/50 text-xs md:text-sm leading-relaxed font-light text-left">
+                  2026 சட்டமன்றத் தேர்தலில், தமிழ்நாட்டின் வளர்ச்சி மற்றும் சமூகப் பாதுகாப்புக்கான தொலைநோக்குப் பார்வை கொள்கை அறிக்கையை தமிழக வெற்றிக் கழகம் அதிகாரப்பூர்வமாக வெளியிட்டுள்ளது. கல்வி, மக்கள் நல்வாழ்வு, விவசாயம் மற்றும் சமூக நீதிக்கான வழிகாட்டுதல்களை இது விளக்குகிறது.
+                </p>
+                
+                <p className="text-cream/45 text-[10px] uppercase font-mono tracking-widest mt-4 flex items-center gap-1.5 text-left">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  For the complete TVK manifesto, click here to view on the official site.
+                </p>
+              </div>
+
+              {!showManifestoEmbed && (
+                <div className="md:col-span-4 flex justify-center py-4">
+                  <div 
+                    onClick={() => setShowManifestoEmbed(true)}
+                    className="w-36 h-48 bg-dark/60 border border-white/10 hover:border-primary/40 rounded-sm p-4 relative group cursor-pointer transition-all shadow-xl hover:-translate-y-1 flex flex-col justify-between text-left"
+                  >
+                    <div className="absolute top-2 right-2 p-1 bg-primary/10 rounded-full text-primary group-hover:bg-primary group-hover:text-dark transition-colors">
+                      <BookOpen className="w-4 h-4" />
+                    </div>
+                    <span className="text-[8px] font-mono text-white/30 uppercase tracking-widest">Election 2026</span>
+                    <div>
+                      <h4 className="font-tamil text-primary text-xs font-bold leading-tight group-hover:text-cream transition-colors">தேர்தல் கொள்கை</h4>
+                      <p className="text-[10px] text-cream/70 mt-1 uppercase font-bold tracking-wide">TVK Manifesto</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {showManifestoEmbed && (
+              <motion.div 
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 500 }}
+                exit={{ opacity: 0, height: 0 }}
+                className="mt-8 border border-white/10 rounded-sm overflow-hidden h-[500px] w-full bg-dark relative"
+              >
+                <div className="absolute top-2 left-2 z-10 bg-dark/90 backdrop-blur-md px-3 py-1.5 rounded-sm border border-primary/20 flex items-center gap-1.5 pointer-events-none">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <p className="text-[9px] font-bold text-primary uppercase tracking-widest text-left">Interactive Manifesto PDF Viewer</p>
+                </div>
+                <iframe
+                  src="https://docs.google.com/gview?embedded=1&url=https://github.com/rahulcvwebsitehosting/ImageStorage/raw/d084feaa6f886c2ea2c46c7175e1aff290d9e2f8/BussyNAnand%20Images/TVK%20MANIFESTO.pdf"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  className="opacity-95 contrast-125"
+                  title="TVK 2026 Party Manifesto Document"
+                ></iframe>
+              </motion.div>
+            )}
+          </motion.div>
+
         </div>
       </div>
     </section>
