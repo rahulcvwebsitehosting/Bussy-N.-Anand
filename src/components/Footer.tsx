@@ -60,7 +60,7 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6 border-b border-white/10 pb-2 inline-block">Quick Links</h4>
             <ul className="space-y-3">
-              {['Home', 'About', 'Journey', 'Transparency', 'Constituency', 'Updates', 'Achievements'].map((link) => (
+              {['Home', 'About', 'Journey', 'Welfare', 'Transparency', 'Constituency', 'Updates', 'Achievements'].map((link) => (
                 <li key={link}>
                   <a href={`#${link.toLowerCase().replace(' ', '')}`} className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-primary transition-colors"></span>

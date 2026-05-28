@@ -36,19 +36,19 @@ export function Gallery() {
       en: "At the Secretariat"
     },
     {
-      src: "https://images.livemint.com/img/2024/02/02/600x338/TVK_1706871542152_1706871542385.JPEG",
+      src: "https://raw.githubusercontent.com/rahulcvwebsitehosting/ImageStorage/refs/heads/main/BussyNAnand%20Images/TVK%20Party%20Launch.jpg",
       alt: "Tamilaga Vettri Kazhagam Party Launch",
       ta: "த.வெ.க கட்சித் தொடக்கம்",
       en: "TVK Party Launch"
     },
     {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bussy_Anand.jpg/640px-Bussy_Anand.jpg",
+      src: "https://raw.githubusercontent.com/rahulcvwebsitehosting/ImageStorage/refs/heads/main/BussyNAnand%20Images/Public%20Grievance%20Redressal.png",
       alt: "Constituency Grievance Meeting",
       ta: "தொகுதி மக்கள் சந்திப்பு",
       en: "Public Grievance Redressal"
     },
     {
-      src: "https://img.etimg.com/thumb/msid-107353982,width-1200,height-900,resizemode-4,imgsize-46938/thalapathy-vijay-political-party-tamilaga-vettri-kazhagam.jpg",
+      src: "https://raw.githubusercontent.com/rahulcvwebsitehosting/ImageStorage/refs/heads/main/BussyNAnand%20Images/Vision.png",
       alt: "Political Vision and Leadership",
       ta: "அரசியல் பார்வை",
       en: "Political Vision"

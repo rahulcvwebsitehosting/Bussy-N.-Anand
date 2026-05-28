@@ -1,10 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Instagram, Mail, Phone, Send, Facebook, Youtube } from 'lucide-react';
 
 export function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', category: 'General Inquiry', ward: 'West Mambalam (Ward 140)', message: '' });
-  const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', category: 'General Inquiry', ward: 'West Mambalam South (Ward 140)', message: '' });
+  const [status, setStatus] = useState<'idle' | 'redirecting' | 'received'>('idle');
+
+  useEffect(() => {
+    const handleSelectWard = (e: Event) => {
+      const customEvent = e as CustomEvent<string>;
+      if (customEvent.detail) {
+        setFormData(prev => ({ ...prev, ward: customEvent.detail }));
+      }
+    };
+    window.addEventListener('select-ward', handleSelectWard);
+    return () => window.removeEventListener('select-ward', handleSelectWard);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -14,8 +25,13 @@ export function Contact() {
     e.preventDefault();
     const subject = encodeURIComponent(`Grievance from ${formData.name} - ${formData.category}`);
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nWard: ${formData.ward}\nCategory: ${formData.category}\n\nMessage:\n${formData.message}`);
+    
+    setStatus('redirecting');
     window.location.href = `mailto:office@bussynanand.com?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    
+    setTimeout(() => {
+      setStatus('received');
+    }, 5000);
   };
 
   return (
@@ -161,11 +177,13 @@ export function Contact() {
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-dark border border-white/10 rounded-sm text-cream focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
                     >
-                      <option>West Mambalam (Ward 140)</option>
-                      <option>T. Nagar (Ward 141)</option>
+                      <option>T. Nagar North (Ward 117)</option>
+                      <option>West Mambalam North (Ward 134)</option>
+                      <option>Kodambakkam South (Ward 135)</option>
                       <option>Pondy Bazaar (Ward 136)</option>
+                      <option>West Mambalam South (Ward 140)</option>
+                      <option>T. Nagar South (Ward 141)</option>
                       <option>CIT Nagar (Ward 142)</option>
-                      <option>Kodambakkam (Ward 135)</option>
                     </select>
                   </div>
                 </div>
@@ -181,12 +199,19 @@ export function Contact() {
                     required
                   ></textarea>
                 </div>
-                {submitted ? (
+                {status === 'redirecting' && (
+                  <div className="w-full bg-primary/10 border border-primary/30 rounded-sm p-6 text-center animate-pulse">
+                    <p className="text-primary font-bold uppercase tracking-widest text-sm mb-2">Redirecting to Gmail...</p>
+                    <p className="text-white/60 text-xs">Opening your email app. Please send the pre-filled message.</p>
+                  </div>
+                )}
+                {status === 'received' && (
                   <div className="w-full bg-primary/10 border border-primary/30 rounded-sm p-6 text-center">
                     <p className="text-primary font-bold uppercase tracking-widest text-sm mb-2">Message Received</p>
                     <p className="text-white/60 text-xs">Thank you. Our office will review your message and respond within 3 working days.</p>
                   </div>
-                ) : (
+                )}
+                {status === 'idle' && (
                   <button 
                     type="submit"
                     className="w-full bg-primary text-dark hover:bg-accent px-8 py-4 rounded-sm font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2 group relative overflow-hidden"

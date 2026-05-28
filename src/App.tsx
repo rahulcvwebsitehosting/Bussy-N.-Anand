@@ -2,8 +2,10 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Timeline } from './components/Timeline';
+import { GoodDeeds } from './components/GoodDeeds';
 import { Achievements } from './components/Achievements';
 import { Constituency } from './components/Constituency';
+import { WardInteractiveMap } from './components/WardInteractiveMap';
 import { Transparency } from './components/Transparency';
 import { Updates } from './components/Updates';
 import { TVK } from './components/TVK';
@@ -19,8 +21,10 @@ export default function App() {
       <main>
         <About />
         <Timeline />
+        <GoodDeeds />
         <Transparency />
         <Constituency />
+        <WardInteractiveMap />
         <Updates />
         <Achievements />
         <TVK />

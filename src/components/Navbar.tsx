@@ -20,6 +20,7 @@ export function Navbar() {
     { en: 'Home', ta: 'முகப்பு', href: '#hero' },
     { en: 'About', ta: 'பற்றி', href: '#about' },
     { en: 'Journey', ta: 'பயணம்', href: '#timeline' },
+    { en: 'Welfare', ta: 'நற்செயல்கள்', href: '#gooddeeds' },
     { en: 'Transparency', ta: 'வெளிப்படைத்தன்மை', href: '#transparency' },
     { en: 'Constituency', ta: 'தொகுதி', href: '#constituency' },
     { en: 'Updates', ta: 'செய்திகள்', href: '#updates' },
