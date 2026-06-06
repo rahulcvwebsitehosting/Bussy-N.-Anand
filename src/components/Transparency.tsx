@@ -4,18 +4,18 @@ import { Shield, Info, Gavel, Landmark } from 'lucide-react';
 export function Transparency() {
   const cases = [
     { 
-      case: "Karur Stampede Case", 
-      details: "CBI investigation; charges include attempt to commit culpable homicide.", 
+      case: "Karur Stampede Case (Contested)", 
+      details: "Named in the FIR under BNS Section 105 (Culpable homicide not amounting to murder), Section 110 (Attempt to commit culpable homicide), Section 125 (Endangering life or personal safety of others), Section 223 (Disobedience to order duly promulgated by public servant), and Section 3 of the Tamil Nadu Public Property (Prevention of Damage and Loss) Act, 1992. Under CBI investigation; questioning completed with detailed statements submitted.", 
+      status: "Under Investigation / Sub-judice" 
+    },
+    { 
+      case: "Trichy Airport Case (Contested)", 
+      details: "Unlawful assembly, obstruction of public path, and alleged assault on a public servant. Charges are fully contested in court.", 
       status: "Sub-judice" 
     },
     { 
-      case: "Trichy Airport Case", 
-      details: "Unlawful assembly and assault on public servant.", 
-      status: "Sub-judice" 
-    },
-    { 
-      case: "R1 Mambalam Case", 
-      details: "Various charges as per official records.", 
+      case: "R1 Mambalam Case (Contested)", 
+      details: "Preventive arrest/assembly charges under relevant sections of the IPC/BNS, arising from political rallies and demonstrations.", 
       status: "Sub-judice" 
     }
   ];

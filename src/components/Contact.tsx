@@ -39,7 +39,7 @@ export function Contact() {
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nWard: ${formData.ward}\nCategory: ${formData.category}\n\nMessage:\n${formData.message}`);
     
     setStatus('redirecting');
-    window.location.href = `mailto:office@bussynanand.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:bussynanand.contact@gmail.com?subject=${subject}&body=${body}`;
     
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -111,7 +111,7 @@ export function Contact() {
                     </div>
                     <div>
                       <h4 className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Email</h4>
-                      <a href="mailto:office@bussynanand.com" className="text-primary font-bold hover:text-white transition-colors mt-1 inline-block">office@bussynanand.com</a>
+                      <a href="mailto:bussynanand.contact@gmail.com" className="text-primary font-bold hover:text-white transition-colors mt-1 inline-block">bussynanand.contact@gmail.com</a>
                     </div>
                   </div>
                 </div>
@@ -230,15 +230,20 @@ export function Contact() {
                   </div>
                 )}
                 {status === 'idle' && (
-                  <button 
-                    type="submit"
-                    className="w-full bg-primary text-dark hover:bg-accent px-8 py-4 rounded-sm font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2 group relative overflow-hidden"
-                  >
-                    <span className="relative z-10 flex items-center gap-2">
-                      Send Message
-                      <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </span>
-                  </button>
+                  <div className="space-y-4">
+                    <button 
+                      type="submit"
+                      className="w-full bg-primary text-dark hover:bg-accent px-8 py-4 rounded-sm font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2 group relative overflow-hidden"
+                    >
+                      <span className="relative z-10 flex items-center gap-2">
+                        Send Message
+                        <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      </span>
+                    </button>
+                    <p className="text-[10px] text-white/30 text-center leading-relaxed font-light">
+                      Note: This is an independent informational initiative. Messages sent via this form are routed via your preferred email client to bussynanand.contact@gmail.com. Do not include highly sensitive personal documents.
+                    </p>
+                  </div>
                 )}
               </form>
             </div>

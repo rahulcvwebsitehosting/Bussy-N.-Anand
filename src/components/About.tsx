@@ -4,14 +4,14 @@ import { Calendar, User, MapPin, Award } from 'lucide-react';
 export function About() {
   const bioFacts = [
     { icon: <Calendar />, label: "Born", value: "18 July 1964, Puducherry" },
-    { icon: <Award />, label: "Cabinet Role", value: "Minister, Govt of Tamil Nadu" },
-    { icon: <User />, label: "Education", value: "8th Std (Pass), Calve College (1981)" },
+    { icon: <Award />, label: "Cabinet Role", value: "Minister for Rural Development, Panchayats & Irrigation" },
+    { icon: <User />, label: "Alma Mater", value: "Calve College, Puducherry" },
     { icon: <MapPin />, label: "Constituency", value: "T. Nagar (MLA 2026)" },
   ];
 
   const secondaryFacts = [
+    { label: "Formal Schooling", value: "8th Std (Pass) — Puducherry EC Affidavit" },
     { label: "Financial Transparency", value: "₹7.48 Crore — Election Commission Affidavit, 2026" },
-    { label: "Early Career", value: "Real Estate & Printing Press" },
   ];
 
   return (

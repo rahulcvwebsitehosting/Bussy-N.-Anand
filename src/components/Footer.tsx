@@ -29,7 +29,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-white/60 leading-relaxed mb-6 max-w-md font-light">
-              Minister, Government of Tamil Nadu. General Secretary, Tamilaga Vettri Kazhagam. Representing T. Nagar Constituency (Chennai).
+              Minister for Rural Development, Panchayats & Irrigation, Government of Tamil Nadu. General Secretary, Tamilaga Vettri Kazhagam. Representing T. Nagar Constituency (Chennai).
             </p>
             <div className="mb-6 p-3 border border-primary/20 bg-primary/5 rounded-sm">
                <p className="text-primary text-[10px] font-bold uppercase tracking-[0.2em] leading-relaxed">

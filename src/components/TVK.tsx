@@ -21,7 +21,7 @@ export function TVK() {
     { title: "Jul 2024 — Opposing NEET", desc: "Demanded abolishment of NEET exam and restoration of education to State List — championing rural and Tamil students." },
     { title: "2024 — Ideological Stance", desc: "Aligned with centre-left; explicitly rejected right-wing politics. Committed to Ambedkar's constitutional values, Periyar's social reform, and Kamaraj's people-first governance." },
     { title: "Feb 2025 — Booth Expansion", desc: "Announced massive expansion: 70,000+ booth agents appointed, internal hierarchy restructured for democratic participation." },
-    { title: "Sept 2025 — Karur Rally Support", desc: "Following the Karur rally tragedy, Vijay personally announced ₹2 lakh compensation per deceased family and ₹20,000 per injured. Met families to offer condolences." },
+    { title: "Sept 2025 — Karur Rally Support", desc: "Following the Karur rally tragedy (where a stampede on Sept 27, 2025 tragically claimed 40 lives and left nearly 100 injured), Vijay personally announced ₹2 lakh compensation per deceased family and ₹20,000 per injured. Met families to offer condolences." },
     { title: "2026 Manifesto Promises", desc: "₹2,500/month for women head-of-family; 6 free LPG cylinders/year; 8 grams of gold + silk saree for brides (below ₹5L/yr); Youth job creation." },
     { title: "2026 Election Result", desc: "TVK emerged as the SINGLE LARGEST PARTY in Tamil Nadu with 108 seats out of 234, contesting independently." },
   ];

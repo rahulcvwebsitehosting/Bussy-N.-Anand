@@ -70,7 +70,7 @@ export const PrivacyContent = () => (
     <p className="text-primary font-bold">Last Updated: May 10, 2026</p>
     <section>
       <h3 className="text-cream font-bold uppercase tracking-wider mb-2">1. INTRODUCTION</h3>
-      <p>This Privacy Policy applies to the Site, an independent digital initiative created for informational purposes regarding Shri Bussy N. Anand, Minister of Tamil Nadu and MLA for Thiyagarayanagar (T. Nagar) constituency. This Site is NOT the official website of the Government of Tamil Nadu, Tamilaga Vettri Kazhagam (TVK), or Shri Bussy N. Anand.</p>
+      <p>This Privacy Policy applies to the Site, an independent digital initiative created for informational purposes regarding Shri Bussy N. Anand, Minister for Rural Development, Panchayats & Irrigation of Tamil Nadu and MLA for Thiyagarayanagar (T. Nagar) constituency. This Site is NOT the official website of the Government of Tamil Nadu, Tamilaga Vettri Kazhagam (TVK), or Shri Bussy N. Anand.</p>
       <p>By using this Site, you agree to the collection and use of information in accordance with this policy. This policy is designed to comply with the Information Technology Act, 2000 and the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011.</p>
     </section>
     <section>
@@ -101,7 +101,7 @@ export const PrivacyContent = () => (
     </section>
     <section>
       <h3 className="text-cream font-bold uppercase tracking-wider mb-2">6. CONTACT US</h3>
-      <p>For privacy-related queries or data removal requests: Email: office@bussyanand.org</p>
+      <p>For privacy-related queries or data removal requests: Email: bussynanand.contact@gmail.com</p>
     </section>
   </div>
 );
@@ -131,7 +131,7 @@ export const TermsContent = () => (
     </section>
     <section>
       <h3 className="text-cream font-bold uppercase tracking-wider mb-2">6. CONTACT</h3>
-      <p>For questions about these Terms: Email: office@bussyanand.org</p>
+      <p>For questions about these Terms: Email: bussynanand.contact@gmail.com</p>
     </section>
   </div>
 );

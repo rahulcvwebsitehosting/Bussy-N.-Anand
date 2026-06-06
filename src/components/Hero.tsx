@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowDown } from 'lucide-react';
 
 const titles = [
-  "Minister, Government of Tamil Nadu & General Secretary, TVK",
+  "Minister for Rural Development, Panchayats & Irrigation, Govt of Tamil Nadu",
   "MLA — Thiyagarayanagar, Chennai 2026",
   "General Secretary — Tamilaga Vettri Kazhagam",
   "Former MLA — Bussy Constituency, Puducherry"
@@ -159,7 +159,7 @@ export function Hero() {
             
             <div className="z-40 text-center pb-8 opacity-100 transition-opacity">
               <div className="text-primary font-tamil text-2xl md:text-3xl mb-1 drop-shadow-md">Hon. Bussy N. Anand</div>
-              <div className="text-[10px] uppercase tracking-[0.3em] text-white/60">Minister, Govt of Tamil Nadu</div>
+              <div className="text-[10px] uppercase tracking-[0.3em] text-white/60">Minister for Rural Development, Panchayats & Irrigation</div>
             </div>
           </div>
           

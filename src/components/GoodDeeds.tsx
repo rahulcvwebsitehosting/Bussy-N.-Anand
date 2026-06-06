@@ -65,10 +65,10 @@ export function GoodDeeds() {
       highlightTa: "51,632 மாபெரும் வாக்குகள்"
     },
     {
-      titleEn: "Sworn In as Minister (Government of Tamil Nadu)",
-      titleTa: "அமைச்சராகப் பொறுப்பு ஏற்பு",
-      descEn: "Elevated to Cabinet rank as a Minister in the Government of Tamil Nadu, executing democratic reforms, people-first administration, and youth welfare.",
-      descTa: "தமிழக அமைச்சரவையில் அமைச்சராகப் பொறுப்பேற்று, மக்கள் நலன், இளைஞர் மேம்பாடு மற்றும் ஜனநாயக சீர்திருத்தங்களை முன்னெடுக்கும் மிக உயரிய பொறுப்பில் செயலாற்றி வருகிறார்.",
+      titleEn: "Sworn In as Rural Development & Irrigation Minister",
+      titleTa: "ஊரக வளர்ச்சி மற்றும் பாசனத் துறை அமைச்சர்",
+      descEn: "Elevated to Cabinet rank as the Minister for Rural Development, Panchayats & Irrigation in the Government of Tamil Nadu, executing democratic reforms and public welfare.",
+      descTa: "தமிழக அமைச்சரவையில் ஊரக வளர்ச்சி, ஊராட்சி மற்றும் பாசனத் துறை அமைச்சராகப் பொறுப்பேற்று, மக்கள் நலன், பாசன மேலாண்மை மற்றும் கிராமப்புற உள்கட்டமைப்பு பணிகளை முன்னெடுத்து வருகிறார்.",
       icon: <Sparkles className="w-6 h-6" />,
       highlighten: "Honorable Assembly Rank",
       highlightTa: "பாதுகாப்பான மக்கள் சேவை"

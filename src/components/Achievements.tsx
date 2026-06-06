@@ -11,7 +11,7 @@ export function Achievements() {
   ];
 
   const cards = [
-    { title: "Minister, Government of TN", desc: "Hon. Bussy N. Anand serves as a Minister in the 2026 Tamil Nadu Cabinet, following the historic debut of TVK in the Assembly Elections." },
+    { title: "Rural Dev & Irrigation Minister", desc: "Hon. Bussy N. Anand serves as the Minister for Rural Development, Panchayats & Irrigation in the 2026 Tamil Nadu Cabinet, following the historic debut of TVK in the Assembly Elections." },
     { title: "Defeating Heavyweights", desc: "In the 2026 T. Nagar election, he secured 51,632 votes, convincingly defeating AIADMK's B. Sathyanarayanan by 13,027 votes and DMK's candidate by 14,615 votes." },
     { title: "Historic 2026 Victory", desc: "Won Thiyagarayanagar assembly seat in Chennai — a constituency dominated by DMK and AIADMK for decades — with a commanding majority of 13,027 votes on TVK's debut election." },
     { title: "People's Voice", desc: "Served as TVK's primary public spokesperson, articulating party vision on governance, youth empowerment, and social justice across Tamil Nadu and Puducherry." },

@@ -145,9 +145,10 @@ export function Constituency() {
                 <span className="w-8 h-[1px] bg-primary"></span>
                 Constituency Updates
               </h4>
-              <p className="text-white/60 text-sm leading-relaxed font-light">
+              <blockquote className="text-white/60 text-sm leading-relaxed font-light pl-4 border-l-2 border-primary italic">
                 "Thiyagarayanagar is not just a commercial hub; it is the heart of Chennai's residential legacy. As your representative and Minister, my focus is to synchronize modern urban demands with the peace of our neighborhoods like West Mambalam and CIT Nagar."
-              </p>
+                <cite className="block not-italic text-[10px] uppercase tracking-widest font-bold text-primary mt-4">— Hon. Bussy N. Anand, MLA Statement during Assembly General Discussion, June 2026</cite>
+              </blockquote>
             </div>
           </motion.div>
         </div>

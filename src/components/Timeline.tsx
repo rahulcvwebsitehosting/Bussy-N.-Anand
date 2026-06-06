@@ -10,7 +10,7 @@ export function Timeline() {
     { year: "2016", title: "AINRC Candidacy & Persistence", desc: "Contested Oupalam under AINRC, securing 20.07% of the vote. Although unsuccessful electorally, he continued building the movement full-time." },
     { year: "2024", title: "Inaugural General Secretary", desc: "Appointed inaugural General Secretary of TVK on February 2, 2024. Hand-picked to transform the Iyakkam into a formal political party." },
     { year: "2024–2025", title: "Party Expansion", desc: "Led massive membership drives across Tamil Nadu. Publicly declared that TVK's leader would become the Chief Minister of the state." },
-    { year: "2026", title: "Historic Victory & Ministerial Role", desc: "Elected T. Nagar MLA with 51,632 votes, defeating AIADMK's B. Sathyanarayanan by 13,027 votes. Sworn in as Minister, Government of Tamil Nadu." },
+    { year: "2026", title: "Historic Victory & Ministerial Role", desc: "Elected T. Nagar MLA with 51,632 votes, defeating AIADMK's B. Sathyanarayanan by 13,027 votes. Sworn in as Minister for Rural Development, Panchayats & Irrigation, Government of Tamil Nadu." },
   ];
 
   return (
