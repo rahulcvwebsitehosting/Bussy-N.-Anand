@@ -35,24 +35,31 @@ export function Navbar() {
       <div className="fixed top-0 left-0 w-full h-1 bg-primary z-[60]"></div>
       <div className="fixed top-1 left-0 w-full h-4 bg-gradient-to-b from-primary/20 to-transparent z-[60] pointer-events-none"></div>
       <nav className={`fixed top-0 w-full z-[70] transition-all duration-300 ${isScrolled ? 'bg-dark/90 backdrop-blur-md border-b border-primary/30 py-4 shadow-lg' : 'bg-transparent py-6 border-b border-white/5'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-4 2xl:px-8">
           <div className="flex justify-between items-center">
             
             <div className="flex items-center gap-4 shrink-0">
               <div className="w-12 h-12 flex items-center justify-center aspect-square overflow-hidden shrink-0">
                 <img src="https://i.ibb.co/V0920jFM/tvklogo-removebg-preview.png" alt="TVK Logo" className="w-full h-full object-contain rounded-full" />
               </div>
-              <div className="flex flex-col shrink-0 min-w-max">
+              <div className="flex flex-col shrink-0 xl:max-w-[350px] min-[1340px]:max-w-[450px] 2xl:max-w-none">
                 <span className={`font-sans text-lg md:text-xl font-bold text-primary ${isTamil ? 'font-tamil' : 'tracking-tight'}`}>
                   {isTamil ? 'புஸ்ஸி என். ஆனந்த்' : 'BUSSY N. ANAND'}
                 </span>
-                <span className={`text-[9px] md:text-[10px] uppercase opacity-80 text-cream ${isTamil ? 'font-tamil' : 'tracking-[0.2em]'}`}>
-                  {isTamil ? 'அமைச்சர் | சட்டமன்ற உறுப்பினர் | த.வெ.க' : 'Minister | MLA | General Secretary, TVK'}
+                <span 
+                  title={isTamil ? 'அமைச்சர் | சட்டமன்ற உறுப்பினர் | பொதுச்செயலாளர், தமிழக வெற்றிக் கழகம்' : 'Minister | MLA | General Secretary, Tamilaga Vettri Kazhagam'}
+                  className={`text-[8px] md:text-[10px] xl:text-[7.5px] min-[1340px]:text-[9.5px] uppercase opacity-80 text-cream leading-tight ${isTamil ? 'font-tamil' : 'tracking-[0.15em]'} truncate block`}
+                >
+                  {isTamil ? 'அமைச்சர் | சட்டமன்ற உறுப்பினர் | பொதுச்செயலாளர், தமிழக வெற்றிக் கழகம்' : 'Minister | MLA | General Secretary, Tamilaga Vettri Kazhagam'}
                 </span>
               </div>
             </div>
 
-            <div className="hidden xl:flex items-center gap-4 2xl:gap-6 text-[10px] font-bold tracking-widest uppercase shrink-0">
+            <div className={`hidden xl:flex items-center font-bold tracking-widest uppercase shrink-0 ${
+              isTamil 
+                ? 'gap-1.5 min-[1340px]:gap-2.5 2xl:gap-4 text-[8.5px] min-[1340px]:text-[9.5px]' 
+                : 'gap-2.5 min-[1340px]:gap-4 2xl:gap-6 text-[9.5px] min-[1340px]:text-[10px]'
+            }`}>
               {navLinks.map((link) => (
                 <a key={link.en} href={link.href} className={`text-cream/80 hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary pb-1 ${isTamil ? 'font-tamil tracking-normal' : ''}`}>
                   {isTamil ? link.ta : link.en}
@@ -60,7 +67,7 @@ export function Navbar() {
               ))}
               <button 
                 onClick={() => setIsTamil(!isTamil)}
-                className="px-4 py-2 border border-primary rounded-full text-[10px] uppercase tracking-widest hover:bg-primary hover:text-dark transition-all text-cream whitespace-nowrap"
+                className="px-3 py-1.5 border border-primary rounded-full text-[9px] min-[1340px]:text-[10px] uppercase tracking-widest hover:bg-primary hover:text-dark transition-all text-cream whitespace-nowrap shrink-0"
               >
                 Tamil / English
               </button>

@@ -14,7 +14,22 @@ function ConstituencyMap() {
         src="https://www.openstreetmap.org/export/embed.html?bbox=80.211%2C13.023%2C80.256%2C13.058&amp;layer=mapnik&amp;marker=13.0405%2C80.2337"
         className="grayscale invert opacity-60 contrast-125"
         title="T. Nagar Constituency Map"
-      ></iframe>
+        loading="lazy"
+        referrerPolicy="no-referrer"
+        sandbox="allow-scripts allow-same-origin"
+      >
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-dark/95 p-4 text-center border border-white/10 rounded-sm">
+          <p className="text-cream text-xs mb-2">Google Map / OpenStreetMap failed to load.</p>
+          <a 
+            href="https://www.openstreetmap.org/#map=15/13.0405/80.2337" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-primary hover:underline text-xs font-bold"
+          >
+            View Map on OpenStreetMap ↗
+          </a>
+        </div>
+      </iframe>
       <div className="absolute inset-0 pointer-events-none bg-primary/5 ring-1 ring-inset ring-primary/20"></div>
     </div>
   );
@@ -22,10 +37,12 @@ function ConstituencyMap() {
 
 export function Constituency() {
   const wards = [
+    { name: "Ward 117", area: "T. Nagar North" },
+    { name: "Ward 134", area: "West Mambalam North" },
     { name: "Ward 135", area: "Kodambakkam South" },
     { name: "Ward 136", area: "Pondy Bazaar" },
     { name: "Ward 140", area: "West Mambalam" },
-    { name: "Ward 141", area: "T. Nagar Central" },
+    { name: "Ward 141", area: "T. Nagar South" },
     { name: "Ward 142", area: "CIT Nagar" }
   ];
 
@@ -107,9 +124,19 @@ export function Constituency() {
               
               <div className="bg-primary/5 border-2 border-dashed border-primary/20 p-8 rounded-sm flex flex-col justify-center items-center text-center col-span-1 md:col-span-2">
                 <Users className="text-primary/40 w-12 h-12 mb-4" />
-                <h4 className="text-cream font-bold mb-2">Constituency Service</h4>
-                <p className="text-white/40 text-xs">For urgent grievances or support, please visit our office or use the online portal.</p>
-                <a href="#contact" className="mt-6 text-primary text-[10px] font-bold uppercase tracking-widest hover:underline">Submit Grievance Online →</a>
+                <h4 className="text-cream font-bold mb-2">Constituency Service & Information</h4>
+                <p className="text-white/40 text-xs max-w-sm">
+                  View precise boundaries, locations, and GCC division office details for each ward using our Interactive Map below, or report issues directly to the MLA office online.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center mt-6">
+                  <a href="#ward-map" className="text-primary text-[10px] font-bold uppercase tracking-widest hover:underline flex items-center gap-1">
+                    Explore Ward Map ↓
+                  </a>
+                  <span className="text-white/20 hidden sm:inline">|</span>
+                  <a href="#contact" className="text-primary text-[10px] font-bold uppercase tracking-widest hover:underline flex items-center gap-1">
+                    Submit Grievance Online →
+                  </a>
+                </div>
               </div>
             </div>
 

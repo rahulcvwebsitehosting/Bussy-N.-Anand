@@ -143,7 +143,7 @@ export function GoodDeeds() {
 
         {/* Grid List with Animations */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="popLayout">
             {currentList.map((item, index) => (
               <motion.div
                 key={activeTab + index}

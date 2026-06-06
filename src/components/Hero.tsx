@@ -2,14 +2,15 @@ import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowDown } from 'lucide-react';
 
+const titles = [
+  "Minister, Government of Tamil Nadu & General Secretary, TVK",
+  "MLA — Thiyagarayanagar, Chennai 2026",
+  "General Secretary — Tamilaga Vettri Kazhagam",
+  "Former MLA — Bussy Constituency, Puducherry"
+];
+
 export function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
-  const titles = [
-    "Minister, Government of Tamil Nadu & General Secretary, TVK",
-    "MLA — Thiyagarayanagar, Chennai 2026",
-    "General Secretary — Tamilaga Vettri Kazhagam",
-    "Former MLA — Bussy Constituency, Puducherry"
-  ];
 
   const particles = useMemo(() => {
     return [...Array(30)].map((_, i) => ({
@@ -29,7 +30,7 @@ export function Hero() {
       setTitleIndex((prev) => (prev + 1) % titles.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [titles]);
 
   return (
     <section id="hero" className="relative min-h-screen bg-dark flex flex-col items-center justify-center overflow-hidden pt-20">

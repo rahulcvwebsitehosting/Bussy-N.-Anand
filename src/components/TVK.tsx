@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown, Flag, Users, Heart, Target, Lightbulb, MapPin, CheckCircle2, FileText, BookOpen, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 
@@ -107,15 +107,23 @@ export function TVK() {
                   <ChevronDown className={`w-4 h-4 text-white/50 transition-transform ${openAccordion === index ? 'rotate-180' : ''}`} />
                 </button>
                 
-                <motion.div 
-                  initial={false}
-                  animate={{ height: openAccordion === index ? 'auto' : 0, opacity: openAccordion === index ? 1 : 0 }}
-                  className="overflow-hidden bg-[#3D0606]"
-                >
-                  <div className="px-6 pb-5 pl-6 md:pl-14 pt-2">
-                    <p className="text-white/60 leading-relaxed font-light">{m.desc}</p>
-                  </div>
-                </motion.div>
+                <AnimatePresence initial={false}>
+                  {openAccordion === index && (
+                    <motion.div 
+                      key="content"
+                      layout
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden bg-[#3D0606]"
+                    >
+                      <div className="px-6 pb-5 pl-6 md:pl-14 pt-2">
+                        <p className="text-white/60 leading-relaxed font-light">{m.desc}</p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             ))}
           </div>
@@ -197,27 +205,61 @@ export function TVK() {
               )}
             </div>
 
-            {showManifestoEmbed && (
-              <motion.div 
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 500 }}
-                exit={{ opacity: 0, height: 0 }}
-                className="mt-8 border border-white/10 rounded-sm overflow-hidden h-[500px] w-full bg-dark relative"
-              >
-                <div className="absolute top-2 left-2 z-10 bg-dark/90 backdrop-blur-md px-3 py-1.5 rounded-sm border border-primary/20 flex items-center gap-1.5 pointer-events-none">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <p className="text-[9px] font-bold text-primary uppercase tracking-widest text-left">Interactive Manifesto PDF Viewer</p>
-                </div>
-                <iframe
-                  src="https://docs.google.com/gview?embedded=1&url=https://github.com/rahulcvwebsitehosting/ImageStorage/raw/d084feaa6f886c2ea2c46c7175e1aff290d9e2f8/BussyNAnand%20Images/TVK%20MANIFESTO.pdf"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  className="opacity-95 contrast-125"
-                  title="TVK 2026 Party Manifesto Document"
-                ></iframe>
-              </motion.div>
-            )}
+            <AnimatePresence>
+              {showManifestoEmbed && (
+                <motion.div 
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="mt-8 border border-white/10 rounded-sm overflow-hidden w-full bg-dark relative flex flex-col"
+                >
+                  <div className="bg-dark/95 backdrop-blur-md px-4 py-3 border-b border-white/10 flex flex-wrap justify-between items-center gap-3">
+                    <div className="flex items-center gap-1.5 min-w-max">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                      <p className="text-[9px] font-bold text-primary uppercase tracking-widest text-left">Interactive Manifesto PDF Viewer</p>
+                    </div>
+                    <div className="flex items-center gap-3 text-[10px]">
+                      <span className="text-white/40 block sm:hidden">Mobile? For the best experience, open on desktop or</span>
+                      <span className="text-white/40 hidden sm:block md:hidden">On mobile? For the best experience, open on desktop or</span>
+                      <a 
+                        href="https://github.com/rahulcvwebsitehosting/ImageStorage/raw/d084feaa6f886c2ea2c46c7175e1aff290d9e2f8/BussyNAnand%20Images/TVK%20MANIFESTO.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-primary hover:text-accent font-bold hover:underline py-1 px-3 border border-primary/20 rounded-sm bg-primary/5 hover:bg-primary/10 transition-colors whitespace-nowrap"
+                      >
+                        Open PDF Directly ↗
+                      </a>
+                    </div>
+                  </div>
+                  <div className="h-[60vh] sm:h-[650px] md:h-[750px] min-h-[450px] w-full relative">
+                    <iframe
+                      src="https://docs.google.com/gview?embedded=1&url=https://github.com/rahulcvwebsitehosting/ImageStorage/raw/d084feaa6f886c2ea2c46c7175e1aff290d9e2f8/BussyNAnand%20Images/TVK%20MANIFESTO.pdf"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      className="opacity-95 contrast-125 w-full h-full"
+                      title="TVK 2026 Party Manifesto Document"
+                      loading="lazy"
+                      allow="fullscreen"
+                      referrerPolicy="no-referrer"
+                      sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
+                    >
+                      <div className="absolute inset-0 flex flex-col items-center justify-center bg-dark/95 p-6 text-center border border-white/10 rounded-sm">
+                        <p className="text-cream text-sm mb-4 font-bold">Unable to display the interactive PDF preview here.</p>
+                        <a 
+                          href="https://github.com/rahulcvwebsitehosting/ImageStorage/raw/d084feaa6f886c2ea2c46c7175e1aff290d9e2f8/BussyNAnand%20Images/TVK%20MANIFESTO.pdf" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-dark bg-primary hover:bg-accent font-bold py-2 px-4 rounded-sm transition-colors duration-200"
+                        >
+                          Open PDF Directly ↗
+                        </a>
+                      </div>
+                    </iframe>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
 
         </div>

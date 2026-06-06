@@ -1,10 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Instagram, Mail, Phone, Send, Facebook, Youtube } from 'lucide-react';
+import { MapPin, Instagram, Mail, Send, Facebook, Youtube } from 'lucide-react';
 
 export function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', category: 'General Inquiry', ward: 'West Mambalam South (Ward 140)', message: '' });
   const [status, setStatus] = useState<'idle' | 'redirecting' | 'received'>('idle');
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isMounted = useRef(true);
+
+  useEffect(() => {
+    isMounted.current = true;
+    return () => {
+      isMounted.current = false;
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const handleSelectWard = (e: Event) => {
@@ -29,8 +41,14 @@ export function Contact() {
     setStatus('redirecting');
     window.location.href = `mailto:office@bussynanand.com?subject=${subject}&body=${body}`;
     
-    setTimeout(() => {
-      setStatus('received');
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    
+    timeoutRef.current = setTimeout(() => {
+      if (isMounted.current) {
+        setStatus('received');
+      }
     }, 5000);
   };
 
@@ -71,8 +89,8 @@ export function Contact() {
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-[10px] font-bold text-white/40 uppercase tracking-widest">T. Nagar Constituency Office</h4>
-                      <p className="text-cream font-medium leading-relaxed mt-1">123, South Boag Road,<br />T. Nagar, Chennai - 600017</p>
+                      <h4 className="text-[10px] font-bold text-white/40 uppercase tracking-widest">TVK Party Headquarters</h4>
+                      <p className="text-cream font-medium leading-relaxed mt-1">Tamizhaga Vettri Kazhagam Headquarters,<br />Panaiyur, East Coast Road (ECR),<br />Chennai - 600119</p>
                       <p className="text-[10px] text-primary mt-2 font-bold uppercase tracking-widest">Office Hours: 10 AM - 5 PM</p>
                     </div>
                   </div>

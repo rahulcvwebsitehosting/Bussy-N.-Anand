@@ -97,7 +97,7 @@ const WARD_DATA: WardDetail[] = [
     officeTa: 'மாநகராட்சி 140-வது வார்டு அலுவலகம், ஆர்யா கவுடா சாலை, மேற்கு மாம்பலம் - 600033',
     boundaryEn: 'North by Arya Gowda Road, East by Suburban Railway Line, South by Canal Bank Road, West by Jafferkhanpet boundary.',
     boundaryTa: 'வடக்கில் ஆர்யா கவுடா சாலை, கிழக்கில் புறநகர் ரயில் பாதை, தெற்கில் கால்வாய் கரை சாலை, மேற்கில் ஜாபர்கான்பேட்டை எல்லை.',
-    mapQueryUrl: 'https://maps.google.com/maps?q=Postal+Colony+West+Mambalam+Chennai&t=&z=15&ie=UTF8&iwloc=&output=embed',
+    mapQueryUrl: 'https://maps.google.com/maps?q=GCC+Division+140+Office+Arya+Gowda+Road+West+Mambalam+Chennai&t=&z=15&ie=UTF8&iwloc=&output=embed',
     contactSelectValue: 'West Mambalam South (Ward 140)'
   },
   {
@@ -151,7 +151,7 @@ export function WardInteractiveMap() {
   };
 
   return (
-    <div className="w-full bg-secondary py-20 border-t border-b border-white/5 relative">
+    <div id="ward-map" className="w-full bg-secondary py-20 border-t border-b border-white/5 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Block with Language Toggle */}
@@ -184,7 +184,7 @@ export function WardInteractiveMap() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Ward Selector Panel */}
-          <div className="lg:col-span-4 flex flex-col gap-3 max-h-[550px] overflow-y-auto pr-2 custom-scrollbar">
+          <div className="lg:col-span-4 flex flex-col gap-3 lg:max-h-[550px] lg:overflow-y-auto pr-2 lg:custom-scrollbar">
             {WARD_DATA.map((ward) => {
               const isSelected = selectedWard.id === ward.id;
               return (
@@ -197,14 +197,14 @@ export function WardInteractiveMap() {
                       : 'bg-dark/40 border-white/5 hover:border-white/20 text-cream/70 hover:text-cream hover:bg-dark/80'
                   }`}
                 >
-                  <div className="flex items-start gap-3">
-                    <div className={`mt-0.5 w-6 h-6 rounded-sm flex items-center justify-center font-bold text-xs ${
+                  <div className="flex items-start gap-3 min-w-0">
+                    <div className={`mt-0.5 w-6 h-6 rounded-sm flex items-center justify-center font-bold text-xs shrink-0 ${
                       isSelected ? 'bg-primary text-dark' : 'bg-white/10 text-white/60'
                     }`}>
                       {ward.id}
                     </div>
-                    <div>
-                      <p className="text-xs font-bold tracking-wide uppercase">
+                    <div className="min-w-0">
+                      <p className="text-xs font-bold tracking-wide uppercase truncate">
                         {lang === 'ta' ? `வட்டம் ${ward.id}` : `Ward ${ward.id}`}
                       </p>
                       <p className="text-[11px] text-white/40 mt-1 line-clamp-1 font-light">
@@ -225,10 +225,28 @@ export function WardInteractiveMap() {
             
             {/* Live Map Preview via Iframe */}
             <div className="h-[250px] md:h-auto rounded-sm overflow-hidden border border-white/5 relative bg-secondary group">
+              {/* iOS / Safari Fallback & Map Background Placeholder */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-[#1A0303] z-0">
+                <MapPin className="w-8 h-8 text-primary/30 mb-2 animate-pulse" />
+                <p className="text-white/60 text-xs font-bold uppercase tracking-wider">Ward {selectedWard.id} Map</p>
+                <p className="text-white/30 text-[10px] max-w-[200px] mt-1 mx-auto leading-relaxed">
+                  Interactive preview is loading. If blocked by browser settings, click "Open Map ↗" below.
+                </p>
+              </div>
+
               <div className="absolute top-3 left-3 bg-dark/90 backdrop-blur-md px-3 py-1.5 rounded-sm border border-primary/20 z-10 flex items-center gap-1.5 shadow-lg pointer-events-none">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span className="text-[9px] font-bold uppercase tracking-widest text-primary">Ward {selectedWard.id} Map Preview</span>
               </div>
+
+              <a 
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedWard.officeEn)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-3 right-3 bg-dark/90 backdrop-blur-md px-3 py-1.5 rounded-sm border border-primary/20 z-20 flex items-center gap-1.5 text-[9px] font-bold text-cream hover:text-primary transition-colors cursor-pointer shadow-lg hover:border-primary/50"
+              >
+                Open Map ↗
+              </a>
               
               <AnimatePresence mode="wait">
                 <motion.iframe
@@ -242,9 +260,26 @@ export function WardInteractiveMap() {
                   frameBorder="0"
                   scrolling="no"
                   src={selectedWard.mapQueryUrl}
-                  className="grayscale invert opacity-60 contrast-125 hover:opacity-80 transition-opacity duration-300 h-full w-full"
+                  loading="lazy"
+                  allow="fullscreen; geolocation"
+                  sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="grayscale invert opacity-60 contrast-125 hover:opacity-80 transition-opacity duration-300 h-full w-full relative z-10"
                   title={`Google Maps preview for T. Nagar Ward ${selectedWard.id}`}
-                ></motion.iframe>
+                >
+                  <p className="text-xs text-center text-white/50 p-6">
+                    If map preview fails to load, you can{' '}
+                    <a 
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedWard.officeEn)}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-primary hover:underline hover:text-accent font-bold"
+                    >
+                      click here to view the map on Google Maps
+                    </a>
+                    .
+                  </p>
+                </motion.iframe>
               </AnimatePresence>
             </div>
 
