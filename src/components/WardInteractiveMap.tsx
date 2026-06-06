@@ -317,7 +317,7 @@ export function WardInteractiveMap() {
                 {/* Local Representative/officer Details */}
                 <div className="space-y-3">
                   <h4 className="text-white/40 text-[10px] uppercase tracking-widest font-bold">
-                    {lang === 'ta' ? 'அதிகாரப்பூர்வ முகவரி & தொடர்பு' : 'Official Administration Contacts'}
+                    {lang === 'ta' ? 'உள்ளாட்சி முகவரி & தொடர்பு' : 'Local Administration Contacts'}
                   </h4>
                   
                   {/* Officer Designation */}
@@ -335,7 +335,7 @@ export function WardInteractiveMap() {
                   <div className="flex items-start gap-2.5">
                     <Mail className="text-primary w-4 h-4 mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-[10px] text-white/30 uppercase tracking-widest font-bold">Official GCC Email</p>
+                      <p className="text-[10px] text-white/30 uppercase tracking-widest font-bold">Local GCC Email</p>
                       <a href={`mailto:${selectedWard.email}`} className="text-xs text-primary hover:underline font-light">
                         {selectedWard.email}
                       </a>

@@ -1,6 +1,6 @@
 {
   "name": "Bussy N. Anand MLA",
-  "description": "Official portal for Hon. Bussy N. Anand, MLA for T. Nagar, Minister, and General Secretary of TVK.",
+  "description": "Independent information portal regarding Hon. Bussy N. Anand, MLA for T. Nagar, Minister, and General Secretary of TVK.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

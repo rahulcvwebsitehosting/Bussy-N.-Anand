@@ -37,16 +37,16 @@ export function Footer() {
                </p>
             </div>
             <div className="flex gap-4">
-              <a href="https://x.com/BussyAnand?lang=en" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
+              <a href="https://x.com/BussyAnand?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Visit Shri Bussy N. Anand's Twitter Profile" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/bussyanandoffl/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
+              <a href="https://www.instagram.com/bussyanandoffl/" target="_blank" rel="noopener noreferrer" aria-label="Visit Shri Bussy N. Anand's Instagram Profile" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=100094785247186" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
+              <a href="https://www.facebook.com/profile.php?id=100094785247186" target="_blank" rel="noopener noreferrer" aria-label="Visit Shri Bussy N. Anand's Facebook Profile" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://www.youtube.com/hashtag/bussyanand" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
+              <a href="https://www.youtube.com/hashtag/bussyanand" target="_blank" rel="noopener noreferrer" aria-label="Watch Shri Bussy N. Anand on YouTube" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-primary hover:border-primary transition-all">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>

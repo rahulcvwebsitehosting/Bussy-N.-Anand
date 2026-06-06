@@ -6,13 +6,19 @@ export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedImage(null);
+    };
+
     if (selectedImage) {
       document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
     } else {
       document.body.style.overflow = '';
     }
     return () => {
       document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, [selectedImage]);
 
@@ -25,9 +31,9 @@ export function Gallery() {
     },
     {
       src: "https://raw.githubusercontent.com/rahulcvwebsitehosting/ImageStorage/main/BussyNAnand%20Images/OfficialStatePortrait.png",
-      alt: "Official Presidential Portrait",
-      ta: "அதிகாரப்பூர்வ புகைப்படம்",
-      en: "Official State Portrait"
+      alt: "Cabinet State Portrait",
+      ta: "அமைச்சரவை புகைப்படம்",
+      en: "Cabinet State Portrait"
     },
     {
       src: "https://raw.githubusercontent.com/rahulcvwebsitehosting/ImageStorage/main/BussyNAnand%20Images/AttheSecretariat.png",
@@ -112,6 +118,7 @@ export function Gallery() {
             <button 
               className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors"
               onClick={() => setSelectedImage(null)}
+              aria-label="Close expanded image"
             >
               <X className="w-10 h-10" />
             </button>

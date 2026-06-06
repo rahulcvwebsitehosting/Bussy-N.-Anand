@@ -80,7 +80,7 @@ export function Contact() {
               <div>
                 <h3 className="font-tamil text-2xl font-bold text-primary mb-6 relative z-10 text-center uppercase">தொடர்பு கொள்க</h3>
                 <p className="text-white/60 mb-10 leading-relaxed font-light text-center relative z-10">
-                  "The office of Bussy Anand maintains a direct line of communication with citizens and supporters."
+                  The office of Bussy Anand maintains a direct line of communication with citizens and supporters.
                 </p>
 
                 <div className="space-y-6">
@@ -230,7 +230,18 @@ export function Contact() {
                   </div>
                 )}
                 {status === 'idle' && (
-                  <div className="space-y-4">
+                  <div className="space-y-5">
+                    <label className="flex items-start gap-2.5 cursor-pointer group text-[11px] text-white/50 leading-relaxed font-light select-none">
+                      <input 
+                        type="checkbox" 
+                        required 
+                        className="mt-0.5 rounded border-white/20 bg-dark text-primary focus:ring-primary focus:ring-offset-0 transition-colors w-4 h-4 shrink-0 cursor-pointer" 
+                      />
+                      <span className="text-left">
+                        I hereby consent to the processing of my name, email, and selected ward details as outlined in the <span className="text-primary font-bold">Privacy Policy</span> (linked in the footer). I understand that my message content is processed and sent solely via my local email client (mailto protocol) with no server-side retention on this website.
+                      </span>
+                    </label>
+
                     <button 
                       type="submit"
                       className="w-full bg-primary text-dark hover:bg-accent px-8 py-4 rounded-sm font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2 group relative overflow-hidden"

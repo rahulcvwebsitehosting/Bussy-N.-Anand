@@ -62,7 +62,7 @@ export function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-xl md:text-2xl text-white/70 leading-relaxed font-light">
-              "Hon. Bussy N. Anand currently serves as a Minister in the Government of Tamil Nadu and the General Secretary of Tamilaga Vettri Kazhagam (TVK). He earned the nickname 'Bussy' after his landmark 2006 election win from the Bussy constituency in Puducherry. Having previously served as an MLA for Puducherry, he now represents T. Nagar in Chennai following a decisive victory in the 2026 Assembly Elections."
+              Hon. Bussy N. Anand currently serves as a Minister in the Government of Tamil Nadu and the General Secretary of Tamilaga Vettri Kazhagam (TVK). He earned the nickname 'Bussy' after his landmark 2006 election win from the Bussy constituency in Puducherry. Having previously served as an MLA for Puducherry, he now represents T. Nagar in Chennai following a decisive victory in the 2026 Assembly Elections.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -97,7 +97,7 @@ export function About() {
 
             <div className="relative bg-secondary p-8 md:p-10 rounded-sm border-l-4 border-accent shadow-2xl mt-8">
               <p className="relative z-10 text-[13px] md:text-sm italic text-cream leading-relaxed text-left">
-                "To advocate for the unvoiced and establish a governance model rooted in social justice. TVK strives to empower every community with transparency, dignity, and economic resilience."
+                To advocate for the unvoiced and establish a governance model rooted in social justice. TVK strives to empower every community with transparency, dignity, and economic resilience.
               </p>
               <p className="text-[10px] font-bold mt-4 text-accent uppercase tracking-widest">— OUR MISSION</p>
             </div>

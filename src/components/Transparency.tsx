@@ -72,9 +72,9 @@ export function Transparency() {
                 </table>
               </div>
               <div className="p-4 bg-primary/5 border-t border-white/10">
-                <p className="text-xs text-cream/70 italic flex items-start gap-2">
+                <p className="text-xs text-cream/70 flex items-start gap-2">
                   <Info className="w-4 h-4 text-primary shrink-0" />
-                  "Three cases are currently pending. I am fully cooperating with the judicial process and maintain absolute faith in the legal system of India."
+                  Three cases are currently pending as sub-judice. Bussy Anand maintains full faith in the legal system of India and continues to cooperate with all judicial processes.
                 </p>
               </div>
             </div>

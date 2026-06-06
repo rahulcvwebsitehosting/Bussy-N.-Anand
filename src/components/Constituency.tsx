@@ -117,7 +117,7 @@ export function Constituency() {
                 </p>
                 <div className="bg-primary/10 border border-primary/20 p-6 rounded-sm">
                   <p className="text-primary text-xs font-bold leading-relaxed">
-                    Official masterplans and specific project announcements will be shared following detailed department assessments and ministerial approvals. 
+                    Masterplans and specific project announcements will be shared following detailed department assessments and ministerial approvals. 
                   </p>
                 </div>
               </div>

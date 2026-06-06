@@ -1,10 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Newspaper, Bell, Calendar, ArrowRight, X } from 'lucide-react';
 
 export function Updates() {
   const [showAll, setShowAll] = useState(false);
   const [selectedNews, setSelectedNews] = useState<null | number>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedNews(null);
+    };
+    if (selectedNews !== null) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedNews]);
 
   const news = [
     {
@@ -138,6 +154,7 @@ export function Updates() {
                 </div>
                 <button 
                   onClick={() => setSelectedNews(null)}
+                  aria-label="Close news detail"
                   className="p-1 text-white/50 hover:text-primary transition-colors"
                 >
                   <X className="w-5 h-5" />

@@ -21,7 +21,7 @@ export function TVK() {
     { title: "Jul 2024 — Opposing NEET", desc: "Demanded abolishment of NEET exam and restoration of education to State List — championing rural and Tamil students." },
     { title: "2024 — Ideological Stance", desc: "Aligned with centre-left; explicitly rejected right-wing politics. Committed to Ambedkar's constitutional values, Periyar's social reform, and Kamaraj's people-first governance." },
     { title: "Feb 2025 — Booth Expansion", desc: "Announced massive expansion: 70,000+ booth agents appointed, internal hierarchy restructured for democratic participation." },
-    { title: "Sept 2025 — Karur Rally Support", desc: "Following the Karur rally tragedy (where a stampede on Sept 27, 2025 tragically claimed 40 lives and left nearly 100 injured), Vijay personally announced ₹2 lakh compensation per deceased family and ₹20,000 per injured. Met families to offer condolences." },
+    { title: "Sept 2025 — Karur Rally Support", desc: "Following the Karur rally tragedy (where a stampede on Sept 27, 2025 tragically claimed 41 lives and left nearly 100 injured), Vijay personally announced ₹2 lakh compensation per deceased family and ₹20,000 per injured. Met families to offer condolences." },
     { title: "2026 Manifesto Promises", desc: "₹2,500/month for women head-of-family; 6 free LPG cylinders/year; 8 grams of gold + silk saree for brides (below ₹5L/yr); Youth job creation." },
     { title: "2026 Election Result", desc: "TVK emerged as the SINGLE LARGEST PARTY in Tamil Nadu with 108 seats out of 234, contesting independently." },
   ];
@@ -49,7 +49,7 @@ export function TVK() {
           <div className="absolute -right-20 -top-20 opacity-5 w-64 h-64 bg-[url('data:image/svg+xml,%3Csvg width=\\'60\\' height=\\'60\\' viewBox=\\'0 0 60 60\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cpath d=\\'M30 0c16.568 0 30 13.432 30 30S46.568 60 30 60 0 46.568 0 30 13.432 0 30 0zm0 5c13.807 0 25 11.193 25 25S43.807 55 30 55 5 43.807 5 30 16.193 5 30 5z\\' fill=\\'%23E8A020\\' fill-rule=\\'evenodd\\'/%3E%3C/svg%3E')] rotate-45"></div>
           
           <p className="text-xl md:text-2xl text-cream leading-relaxed font-light italic relative z-10 text-center max-w-4xl mx-auto">
-            "Founded on 2 February 2024 by actor-turned-politician Vijay, Tamilaga Vettri Kazhagam is a centre-left regional political party headquartered in Panaiyur, Chennai. Its ideology is rooted in egalitarianism, secularism, social justice, and the philosophies of Ambedkar, Periyar, and Kamaraj."
+            Founded on 2 February 2024 by actor-turned-politician Vijay, Tamilaga Vettri Kazhagam is a centre-left regional political party headquartered in Panaiyur, Chennai. Its ideology is rooted in egalitarianism, secularism, social justice, and the philosophies of Ambedkar, Periyar, and Kamaraj.
           </p>
         </motion.div>
 
@@ -141,7 +141,7 @@ export function TVK() {
               <div>
                 <div className="flex items-center gap-2 text-primary mb-2">
                   <FileText className="w-4 h-4" />
-                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] font-bold">Official Document Launch</span>
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] font-bold">Party Document Release</span>
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-cream tracking-tight">
                   2026 Tamil Nadu Development Manifesto
@@ -182,7 +182,7 @@ export function TVK() {
                 
                 <p className="text-cream/45 text-[10px] uppercase font-mono tracking-widest mt-4 flex items-center gap-1.5 text-left">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  For the complete TVK manifesto, click here to view on the official site.
+                  For the complete TVK manifesto, click the button above to view or download.
                 </p>
               </div>
 
