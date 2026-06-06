@@ -12,42 +12,42 @@ export function Updates() {
       title: "Sworn in as Minister for Rural Development, Panchayats & Irrigation",
       desc: "Following the historic victory in T. Nagar, Shri Bussy N. Anand was sworn in to steer the critical portfolios of Rural Development, Panchayat Raj, and Irrigation in the Government of Tamil Nadu.",
       category: "Cabinet Update",
-      fullContent: "Following the historic electoral victory in the Thiyagarayanagar (T. Nagar) constituency, Shri Bussy N. Anand was formally inducted into the new Cabinet. He has been assigned critical development portfolios: Rural Development and Panchayats, along with Irrigation. In his inaugural press briefing, the Minister pledged to dedicate his administration to strengthening rural water infrastructure, modernizing panchayat administration systems, and introducing transparent democratic reforms. 'Our work begins at the grassroots,' he stated, underlining a commitment to equitable regional development."
+      fullContent: "Following the 2026 electoral victory in Thiyagarayanagar (T. Nagar), Shri Bussy N. Anand was inducted into the cabinet of the Government of Tamil Nadu. The portfolios assigned cover Rural Development, Panchayats, and Irrigation. Departmental outlines focus on infrastructure strengthening, panchayat administration synchronization, and local administrative updates."
     },
     {
       date: "May 8, 2026",
       title: "Constituency Grievance Channel Open",
       desc: "The digital grievance portal for T. Nagar residents is now active. Citizens are encouraged to submit their concerns directly for review.",
       category: "Constituency",
-      fullContent: "Maintaining his landmark standard of accessibility, Shri Bussy N. Anand has officially launched an updated public grievance redressal channel. Residents of T. Nagar can now report issues pertaining to local municipal works, sewerage, street lighting, and family ration cards online. Submissions are automatically forwarded to dedicated ward-level representatives for verification and fast-tracked administrative resolution. This platform ensures absolute transparency, allowing citizens to check the status of their civic petitions securely."
+      fullContent: "As part of independent citizen initiative updates, a public contact channel outlines resources for residents of T. Nagar to register neighborhood concerns. Standard divisions cover municipal works, sanitation infrastructure, and public utility reporting. Submissions are designed to guide local efforts in coordination with ward-level volunteers and civic representatives."
     },
     {
       date: "May 5, 2026",
       title: "TVK Party Strengthening Meet",
       desc: "General Secretary Bussy Anand presided over the district secretaries' meet to outline the party's future roadmap.",
       category: "Party News",
-      fullContent: "In his capacity as the General Secretary of Tamilaga Vettri Kazhagam (TVK), Shri Bussy N. Anand presided over a high-level coordination council with all district secretaries in Chennai. Following the party's breakthrough electoral performance, the meeting detailed strategies to institutionalize grassroots booth-level forums, improve transparency, and expand membership support systems. Discussions also focused on executing key social justice objectives and organizing constituency welfare initiatives across Tamil Nadu and Puducherry."
+      fullContent: "Reflecting TVK's electoral expansion following the 2026 assembly elections, standard party organizing protocols focus on stabilizing booth-level coordination. General Secretary Bussy N. Anand coordinates political alignment across districts in Tamil Nadu and Puducherry, facilitating party membership records and constituency welfare initiatives."
     },
     {
       date: "April 28, 2026",
       title: "Rural Water & Asset Modernization Draft Released",
       desc: "An initial blueprint for improving rural drinking water access and renovating public assets was presented for department review.",
       category: "Development",
-      fullContent: "In coordination with departmental engineers and administrative heads, the office of the Minister for Rural Development and Irrigation released a comprehensive modernization draft. The initiative proposes decentralized solar-pump installations in 1,200 panchayats, water canal de-silting, and a complete structural audit of community centers. Public feedback is welcomed as part of a joint effort to construct durable, climate-resilient rural assets across the state."
+      fullContent: "Standard administrative briefs outline proposals for rural infrastructure, including water conservation efforts and local assets management. The Department of Rural Development and Irrigation handles the planning and structural evaluation of panchayat utility centers across targeted districts in Tamil Nadu."
     },
     {
       date: "April 15, 2026",
       title: "T. Nagar Smart Drainage Upgrade Review",
       desc: "A joint inspection with Greater Chennai Corporation (GCC) officials was conducted to inspect waterlogging preventions in T. Nagar.",
       category: "Municipal",
-      fullContent: "Addressing long-standing local concerns regarding storm-induced waterlogging, MLA Bussy N. Anand led a joint inspect of drainage canals in West Mambalam, CIT Nagar, and Pondy Bazaar alongside GCC commissioners. The inspection mapped out bottleneck points to streamline underground conduit flow before upcoming monsoon seasons. Emergency relief protocols and high-capacity pump installations are being positioned across flood-vulnerable subdivisions to ensure residential peace."
+      fullContent: "Addressing local urban drainage concerns, inspections are typically scheduled around West Mambalam, CIT Nagar, and Pondy Bazaar in collaboration with Greater Chennai Corporation (GCC) engineers. Efforts focus on mapping localized bottlenecks to help mitigate seasonal waterlogging risks in high-density areas of the T. Nagar constituency."
     },
     {
       date: "April 2, 2026",
       title: "Mandatory Asset Disclosures Submitted to EC",
       desc: "In accordance with legal guidelines, complete asset and financial transparency archives were formally filed.",
       category: "Transparency",
-      fullContent: "Upholding the highest standards of integrity in public office, Shri Bussy N. Anand has completed and submitted his mandatory asset disclosures and affidavit declarations to the Election Commission of India for the 2026 Assembly cycle. The disclosures, detailing total assets of ₹7.48 Crore along with verified legal details, are accessible in the public registry. 'Absolute transparency is the primary safeguard of democratic trust,' Bussy Anand noted during filing."
+      fullContent: "In accordance with electoral guidelines and legal mandates, Shri Bussy N. Anand submitted complete wealth disclosures and candidate affidavits to the Election Commission of India during the 2026 general assembly election. These public declarations, certifying verified financial and asset statements of ₹7.48 Crore, remain fully accessible through the official ECI web registry."
     }
   ];
 

@@ -47,7 +47,7 @@ export function Navbar() {
                   {isTamil ? 'புஸ்ஸி என். ஆனந்த்' : 'BUSSY N. ANAND'}
                 </span>
                 <span 
-                  title={isTamil ? 'அமைச்சர் | சட்டமன்ற உறுப்பினர் | பொதுச்செயலாளர், தமிழக வெற்றிக் கழகம்' : 'Minister | MLA | General Secretary, Tamilaga Vettri Kazhagam'}
+                  title={isTamil ? 'ஊரக வளர்ச்சி, ஊராட்சி மற்றும் பாசனத் துறை அமைச்சர் | சட்டமன்ற உறுப்பினர் | பொதுச்செயலாளர், தமிழக வெற்றிக் கழகம்' : 'Minister for Rural Development, Panchayats & Irrigation | MLA | General Secretary, Tamilaga Vettri Kazhagam'}
                   className={`text-[8px] md:text-[10px] xl:text-[7.5px] min-[1340px]:text-[9.5px] uppercase opacity-80 text-cream leading-tight ${isTamil ? 'font-tamil' : 'tracking-[0.15em]'} truncate block`}
                 >
                   {isTamil ? 'அமைச்சர் | சட்டமன்ற உறுப்பினர் | பொதுச்செயலாளர், தமிழக வெற்றிக் கழகம்' : 'Minister | MLA | General Secretary, Tamilaga Vettri Kazhagam'}
