@@ -241,7 +241,7 @@ export function TVK() {
                       title="TVK 2026 Party Manifesto Document"
                       loading="lazy"
                       allow="fullscreen"
-                      referrerPolicy="no-referrer"
+                      referrerPolicy="no-referrer-when-downgrade"
                       sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
                     >
                       <div className="absolute inset-0 flex flex-col items-center justify-center bg-dark/95 p-6 text-center border border-white/10 rounded-sm">
